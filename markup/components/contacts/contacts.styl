@@ -1,0 +1,66 @@
+.contacts
+  margin-bottom 28px
+  +below('sm')
+    margin-bottom 60px
+  .header-content
+    margin-bottom 32px
+
+.contacts-map-wrapper
+  height 470px
+  width 100%
+  +below('xs')
+    width 100vw
+    margin-right -15px
+    margin-left -15px
+  #contacts-map
+    width 100%
+    height 100%
+
+ymaps
+  &[class*="balloon"]
+    box-shadow none
+
+  &[class*="balloon__layout"]
+    overflow visible
+    ymaps
+      overflow visible !important
+
+  &[class*="balloon__content"]
+    padding 0
+
+  &[class*="balloon__tail"]
+    $shadow()
+    background none
+    width 10px
+    height 10px
+    z-index 1
+    &:after
+      width 20px
+      height 20px
+      bottom -1px
+      left -1px
+
+
+  &[class$="islets_card"],
+  &[class$="islets__is-narrow"]
+    padding 20px
+
+.baloon
+  position relative
+  padding 15px 25px 15px 15px
+  $shadow()
+  &__title
+    color $c-darkgray
+    margin-bottom 4px
+  &__text
+    font-size 16px
+  &__close-icon
+    position absolute
+    right 10px
+    top 10px
+    cursor pointer
+    svg
+      fill $c-red
+      $transition(fill)
+      &:hover
+        fill $c-darkred

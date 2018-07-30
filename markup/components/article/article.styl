@@ -1,0 +1,206 @@
+.article
+  &__header
+    margin-bottom 30px
+
+    .h1
+      &:not(:last-child)
+        margin-bottom 24px
+
+  &__footer
+    margin-top 60px
+    display flex
+    flex-wrap wrap
+    +below('xs')
+        margin-top 0
+
+    .button
+      font-weight 500
+
+  &__body,
+  /body[contenteditable="true"]
+    ul
+      padding-left 20px
+
+    li
+    p
+      margin-top 0
+      margin-bottom 24px
+      color $c-darkgray
+      font-size 16px
+      line-height 24px
+
+    h2
+      margin-top 40px
+      margin-bottom 20px
+      color $c-background_corporate
+      font-size 18px
+      line-height 24px
+      font-weight normal
+
+    p.highlight
+      margin-bottom 32px
+      padding 40px 38px
+
+      &_grey
+        background-color $c-background_default
+
+      &_red
+        background-color $c-red
+        color #fff
+        font-size 18px
+        line-height 24px
+
+    img
+      max-width 100%
+      margin-bottom 32px
+
+    a
+      color $c-darkgray
+      transition .3s ease
+      text-decoration underline
+      &:hover
+        color $c-ui_red
+        text-decoration none
+
+    p
+    h2
+    img
+      &:last-child
+        margin-bottom 0
+
+    table
+        width 100%
+        border-spacing 0
+        border-collapse collapse
+        box-shadow 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+
+    thead,
+    tbody
+        background-color #fff
+
+    thead tr th
+        &:after
+            content ''
+            position absolute
+            right 0
+            top calc(50% - 10px)
+            height 20px
+            border-right 1px solid $c-light-border
+
+    thead tr th:last-child
+        &:after
+            content none
+
+    tr
+        border-bottom 1px solid #E8EAEC
+        background-color #fff
+        transition all .3s ease
+        &:hover
+            box-shadow 0 2px 5px 0 rgba(0,0,0,0.12), 0 2px 10px 0 rgba(0,0,0,0.12)
+            transform: scale(1.005)
+        &:nth-child(2n)
+            background-color #fbfbfc
+
+    td, th
+        position relative
+        padding 16px
+        text-align center
+
+.article-meta
+  display flex
+  align-items center
+
+  &__icon
+    display inline-block
+    margin-right 8px
+    svg
+      display block
+
+  &__text
+    color $c-gray
+    font-size 13px
+    font-weight 500
+    letter-spacing 0.4px
+    line-height 16px
+
+.article-link
+  display block
+
+  &:not(:last-child)
+    margin-bottom 40px
+
+  &:hover
+    & ^[0]__title
+      color $c-ui_red
+
+    & ^[0]__icon
+      animation wobbleLeft 1s ease alternate infinite
+      svg path
+        fill $c-ui_red
+
+  &__meta
+    margin-bottom 25px
+
+  &__icon
+    svg path
+      transition .3s ease
+
+  &__title
+    color #273142
+    font-family Roboto
+    font-size 16px
+    line-height 24px
+    margin-bottom 20px
+    transition .3s ease
+
+  &__footer
+    display flex
+    align-items center
+    justify-content space-between
+
+  &__date
+    color $c-lightgray
+    font-size 13px
+    line-height 18px
+
++above('sm')
+
+  .article
+    &__footer
+
+      .button
+        &:not(:last-child)
+          margin-right 16px
+
++below('xs')
+
+  .article
+    &__body
+      margin-bottom 40px
+    &__footer
+      justify-content center
+      .button
+        padding 10px 16px
+        &.all
+            order 2
+            width 200px
+        &.prev
+            margin-right auto
+            order 1
+            .button__text
+                display none
+        &.next
+            margin-left auto
+            order 3
+            .button__text
+                display none
+        &__icon
+            margin-right 0
+            margin-left 0 !important
+
+@keyframes wobbleLeft
+  0%
+    transform translateX(0)
+
+  100%
+    transform translateX(-16px)

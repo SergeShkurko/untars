@@ -1,0 +1,135 @@
+.main-screen
+  position relative
+  height 460px
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  +below('xs')
+    padding 40px 0 45px
+  &__background
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    +below('xs')
+      justify-content flex-end
+  &__img
+    &_on_desktop
+      min-height 100%
+      +below('sm')
+        display none
+    &_on_tablet
+      min-height 100%
+      +above('md')
+        display none
+      +below('xs')
+        display none
+    &_on_mobile
+      height 100%
+      +above('sm')
+        display none
+  &__overlay
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-color rgba(#2E1C18, 40%)
+    +below('xs')
+      z-index 2
+  &__container
+    height 100%
+    display flex
+    flex-direction column
+    justify-content space-between
+    position relative
+    position absolute
+    left 0
+    right 0
+    bottom 0
+    padding-bottom 60px
+
+    /.about &
+      justify-content flex-start
+
+
+    +below('md')
+      justify-content unset
+      position absolute
+      bottom 0
+      z-index 3
+      // padding-bottom 85px
+    +below('sm')
+      // padding-bottom 40px
+    +below('xs')
+      padding-bottom 30px
+      padding-top 30px
+      // justify-content flex-end
+  &__breadcrumbs
+    margin-top 40px
+    +below('md')
+      margin-top 45px
+    +below('xs')
+      display none
+    .breadcrumbs
+      margin-bottom 0
+  &__content
+    position static
+    bottom 150px
+
+    /.about &
+      margin-top 7.7%
+
+    +below('md')
+      // margin-top 85px
+      // +below('xs')
+      // position absolute
+      z-index 1
+      // left 0
+      // right 0
+      // bottom 50px
+      // height 68%
+      padding 0 15px
+      margin auto 0
+  &__footer
+    display none
+    margin 0
+    +above('md')
+      display block
+  &__footer-items-wrapper
+    display flex
+    justify-content space-between
+    align-items center
+  &__footer-item
+    margin-right 30px
+    +above('lg')
+      max-width 250px
+    +below('md')
+      margin-right 0
+    &:last-child
+      margin-right 0
+    /.swiper-container-fade &
+      +below('md')
+        opacity 0!important
+      &.swiper-slide-active
+        opacity 1!important
+  &__footer-item-content
+    display flex
+    align-items center
+    max-width 250px
+  .main-slider__bullets
+    display none
+    +at('md')
+      display flex
+  &__icon
+    margin-right 22px
+  &__description
+    color #fff
+    line-height 16px
+    font-weight 300
+    font-size 14px

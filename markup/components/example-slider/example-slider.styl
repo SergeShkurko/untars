@@ -1,0 +1,271 @@
+.example-section
+  overflow hidden
+  position relative
+
+  &:after
+    @media (min-width: 1600px)
+      content ''
+      background #f3f4f5
+      height 100%
+      width 10%
+      position absolute
+      top 0
+      right 0
+      z-index 5
+      display block
+
+  +below('xs')
+    background #ffffff
+
+.example-slider
+  overflow visible
+  position relative
+  display flex
+  flex-flow column nowrap
+
+  .tooltip-inner
+    font-weight 500
+    line-height 15px
+
+  +below('sm')
+    overflow hidden
+  &:before
+    +above('lg')
+      content ''
+      background #f3f4f5
+      height 80%
+      width 100%
+      position absolute
+      top 0
+      right 100%
+      z-index 5
+      display block
+
+
+  // &:after
+  //   content ''
+  //   background linear-gradient(270deg, #F3F4F5 25%, rgba(249, 249, 251, 0) 400%);
+  //   height 80%
+  //   width 100%
+  //   position absolute
+  //   top 0
+  //   left 100%
+  //   z-index 1
+  //   display block
+
+  //   +below('md')
+  //     right -325px
+  //   +below('sm')
+  //     content none
+
+  .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+    background #E30000
+
+  &__item
+    display flex
+    position relative
+    cursor pointer
+
+    &:after
+      content ''
+      background linear-gradient(270deg, #F3F4F5 25%, rgba(249, 249, 251, 0) 400%);
+      height 100%
+      width 100%
+      position absolute
+      top 0
+      left 0
+      z-index 1
+      display block
+
+      +below('md')
+        right -325px
+      +below('sm')
+        content none
+
+    &.swiper-slide-active
+      cursor inherit
+      width 100%
+      min-height 300px
+      height 100%
+      &:after
+        content none
+
+      .example-slider__icon
+        width auto
+        padding 25px 85px 0 0
+
+        svg
+          width 201px
+
+    +below('xs')
+      align-items center
+      flex-direction column
+
+  &__content
+    width 65%
+
+    +below('sm')
+      width 100%
+
+  &__icon
+    width 0
+    padding 0
+
+    svg
+      width 0
+
+      +below('xs')
+        width 201px
+
+    +below('xs')
+      width auto
+      padding 0 0 31px 0 !important
+
+  &__type
+    color #EF3124
+    font-size 16px
+    font-weight 500
+    line-height 18px
+    margin-bottom 24px
+
+  &__name
+    color #172A3F
+    font-size 40px
+    font-weight 300
+    line-height 52px
+    margin-bottom 24px
+
+    span
+      position relative
+
+      &:before
+        content ''
+        position absolute
+        left 0
+        bottom 4px
+        background #172a3f
+        height 2px
+        width 100%
+
+      &.text-example
+        border 0
+
+        &:before
+          content none
+
+        +below('xs')
+          display block
+          line-height inherit
+
+
+    +below('xs')
+      font-size 32px
+      line-height 36px
+      margin-bottom 20px
+
+  &__description
+    color #6D7986
+    font-size 16px
+    line-height 23px
+
+  &__controls-wrapper
+    position relative
+    height 25px
+    min-height 23px
+    display flex
+    align-items center
+
+    &:after
+      content ''
+      background linear-gradient(270deg, #97ADC2 0%, #FAFAFB 87.72%, #F3F4F5 100%)
+      position absolute
+      height 2px
+      left 0
+      right 0
+      bottom 11px
+
+  &__slides
+    margin-bottom 20px
+    position relative
+    height unset
+
+    +below('xs')
+      margin-bottom 50px
+
+
+  &__bullets
+    display flex
+    align-items center
+    justify-content space-between
+    height 2px
+    padding 0
+    position relative
+    width 100%
+    z-index 2
+
+    +above('sm')
+      // justify-content flex-start
+      // left 20%
+      // right auto
+      // bottom 80px
+  &__bullet-wrapper
+    &_is_active
+      & ^[0]__bullet
+        background-color #ef3124
+        border 2px solid #ef3124
+        box-shadow 0 0 0 4px #fff, 0 0 0 6px #ef3124
+
+  &__bullet
+    background-color #EDEFF3
+    border 2px solid #A1B5C8
+    border-radius 50%
+    width 10px
+    height 10px
+    display block
+    cursor pointer
+    position relative
+    $transition(opacity)
+    z-index 10
+
+    &:before
+      content ''
+      display block
+      background transparent
+      position absolute
+      top -10px
+      left -10px
+      height 26px
+      width 26px
+
+    &:not(&_is_active)
+      &:hover
+        +above('sm')
+          background-color #ef3124
+          border 2px solid #ef3124
+          box-shadow 0 0 0 4px #fff, 0 0 0 6px #ef3124
+
+    &:last-child
+      margin-right 0
+    &_active
+      background-color #EF3124
+      border 2px solid #D0021B
+
+.swiper-pagination-custom
+  background linear-gradient(270deg, #97ADC2 0%, #FAFAFB 87.72%, #F3F4F5 100%)
+
+#progress
+  background-color #E30000
+  height 2px
+  min-height 2px
+  max-height 2px
+  width 0
+  $transition(width)
+  position absolute
+  bottom 11px
+  left 2px
+  flex-basis 0px
+  flex-shrink 1
+  flex-grow 0
+  z-index 1
+  max-width 100%
+

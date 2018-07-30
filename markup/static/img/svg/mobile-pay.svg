@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <g data-name="Layer 2">
+    <g data-name="Layer 1">
+      <path fill="none" d="M0 0h120v120H0z"/>
+      <path fill="#edeff3" d="M36 28h49v64H36V28z"/>
+      <path fill="#e30000" d="M57.32 49.44l-4.72 13a.26.26 0 0 0 .15.33l2.57 1a.24.24 0 0 0 .32-.15l1.11-3.06h6.53l1.1 3.06a.25.25 0 0 0 .32.15l2.57-1a.26.26 0 0 0 .14-.33l-4.73-13C62.23 48.22 61.7 47 60 47s-2.25 1.24-2.68 2.44zM60 51l2.22 6.66h-4.44zm-7.75 17.68a.25.25 0 0 0-.25.25v2.83a.25.25 0 0 0 .25.25h15.5a.25.25 0 0 0 .25-.25v-2.82a.25.25 0 0 0-.25-.25z"/>
+      <path fill="#283139" d="M48 22h5v2h-5zm11 0h10v2H59z"/>
+      <path fill="#6f86a2" d="M85 74v23a4 4 0 0 1-4 4H40a4 4 0 0 1-4-4V23a4 4 0 0 1 4-4h41a4 4 0 0 1 4 4v45h2V23a6 6 0 0 0-6-6H40a6 6 0 0 0-6 6v74a6 6 0 0 0 6 6h41a6 6 0 0 0 6-6V74z"/>
+      <path fill="#6f86a2" d="M33.991 27.9995l.0097-1 51.9976.4992-.0096 1zM34 91h52v1H34z"/>
+      <path fill="#6f86a2" d="M48 22h5v2h-5z" data-name="Path-10-Copy"/>
+      <path fill="#6f86a2" d="M59 22h10v2H59z" data-name="Path-10-Copy-2"/>
+      <path fill="#6f86a2" d="M56 96h9v2h-9z"/>
+    </g>
+  </g>
+</svg>

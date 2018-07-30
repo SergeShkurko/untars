@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84px" height="86px" viewBox="0 0 84 86">
+    <g fill="none" transform="translate(-34, -17)">
+        <rect id="Rectangle-7-Copy-5" width="120" height="120" x="0" y="0"/>
+        <path fill="#EDEFF3" d="M85,40 L61.5638852,40 C60.6723665,40 60.3490802,40.0928256 60.0231543,40.2671327 C59.6972284,40.4414398 59.4414398,40.6972284 59.2671327,41.0231543 C59.0928256,41.3490802 59,41.6723665 59,42.5638852 L59,75.4361148 C59,76.3276335 59.0928256,76.6509198 59.2671327,76.9768457 C59.4414398,77.3027716 59.6972284,77.5585602 60.0231543,77.7328673 C60.3490802,77.9071744 60.6723665,78 61.5638852,78 L85,78 L85,92 L36,92 L36,28 L85,28 L85,40 Z"/>
+        <path stroke="#283139" stroke-width="2" d="M48,23 L53,23"/>
+        <path stroke="#283139" stroke-width="2" d="M59,23 L69,23"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M86,97 L86,40.4223004 C86,38.2034269 86,38.2034269 86,36.9888137 C86,34.4703903 86,34.4703903 86,23 C86,20.2385763 83.7614237,18 81,18 L40,18 C37.2385763,18 35,20.2385763 35,23 L35,97 C35,99.7614237 37.2385763,102 40,102 L81,102 C83.7614237,102 86,99.7614237 86,97 Z"/>
+        <path stroke="#6F86A2" d="M34,27.5 L86,28"/>
+        <rect width="57" height="36" x="60" y="41" stroke="#6F86A2" stroke-width="2" rx="2" style="
+    fill: #fff;
+"/>
+        <path stroke="#6F86A2" d="M34,91.5 L86,91.5"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M48,23 L53,23"/>
+        <circle cx="70.5" cy="67.5" r="4.5" stroke="#E30000" stroke-width="2"/>
+        <circle cx="76.5" cy="67.5" r="4.5" stroke="#E30000" stroke-width="2"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M59,23 L69,23"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M56,97 L65,97"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M60,50 L116,50"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M60,55 L116,55"/>
+        <path stroke="#E30000" stroke-width="2" d="M91,70 L111,70"/>
+    </g>
+</svg>

@@ -1,0 +1,38 @@
+.requisites-block
+
+  &__row
+    display flex
+    align-items
+
+    &:not(:last-child)
+      margin-bottom 12px
+
+  span
+    font-size $fz-medium
+    line-height 24px
+    color $c-darkest
+    display block
+
+    &:first-child
+      width 240px
+      min-width 240px
+      color $c-gray
+
+    &:last-child
+      width 350px
+
+  &_offset_md
+    margin-bottom 60px
+
+  &_offset_sm
+    margin-bottom 24px
+
+  &_size_lg
+    span
+      &:last-child
+        width auto
+
+  +below('xs')
+    
+    &__row
+      flex-wrap wrap

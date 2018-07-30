@@ -1,0 +1,80 @@
+.why-alfaforex
+  .heading
+    width 50%
+
+    +below('xs')
+      margin-bottom 25px
+      width 100%
+
+  .row
+    margin-bottom 65px
+
+    +below('sm')
+      margin-bottom 30px
+
+    +below('xs')
+      margin-bottom 25px
+
+  .text
+    margin-bottom 15px
+    +below('md')
+      font-size 14px
+
+  &__benefits
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    width 100%
+
+  &__item
+    border 1px solid #E1E4E7
+    border-right 0
+    display flex
+    flex-direction column
+    padding 50px 35px 40px
+    width 33.333%
+
+    +below('sm')
+      width 50%
+
+    +below('xs')
+      border-right 1px solid #E1E4E7
+      width 100%
+
+     &:nth-child(4)
+       +below('sm')
+        border-bottom 0
+
+    &:nth-child(1)
+    &:nth-child(2)
+    &:nth-child(3)
+      border-bottom 0
+
+    &:nth-child(3)
+    &:nth-child(6)
+      border-right 1px solid #E1E4E7
+
+    &:nth-child(3)
+      +below('sm')
+        border-right 0
+
+      +below('xs')
+        border-right 1px solid #E1E4E7
+
+  &__icon
+    margin-bottom 40px
+    height 87px
+    display flex
+    align-items center
+
+  &__title
+    margin-bottom 8px
+    font-weight 500
+    line-height 20px
+    color #212a33
+    font-size 15px
+
+  &__text
+    font-size 13px
+    line-height 16px
+    color #6d7986

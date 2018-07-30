@@ -1,0 +1,38 @@
+extends _template.pug
+include ../components/breadcrumbs/breadcrumbs
+block body
+  +b.SECTION.section._theme_content._size_xsmall
+    .container
+      +breadcrumbs(['Главная', 'Реквизиты'])
+      +b.content-head
+        +b.H1.h1 Реквизиты
+        +b.A.download-link(href="#")
+          +e.icon
+            include ../static/img/svg/download.svg
+          +e.text Скачать реквизиты
+
+      +b.content
+        +e.main
+          +b.requisites
+            - var data1 = [{name:'Полное наименование:', value: 'Общество с ограниченной ответственностью «Альфа-Форекс»'},{name:'Сокращенное наименование:', value: 'ООО «Альфа-Форекс»'},{name:'Место нахождения:', value: 'Barclays Bank Plc Level 16, 1 Churchill Place, London E14 5HP, UK'},{name:'Почтовый адрес:', value: '65465456'},{name:'Телефон:', value: '54654654645'},{name:'Электронная почта:', value: '6465465464'}]
+            - var data2 = [{name:'Получатель:', value: 'ООО «Альфа-Форекс»'},{name:'Номинальный счет:', value: '40807978901600000118'},{name:'ИНН:', value: '40807978901600000118'},{name:'КПП:', value: '30101810400000000555'},{name:'Телефон:', value: '54654654645'},{name:'Электронная почта:', value: '6465465464'}]
+            - var data3 = [{name:'Банк:', value: '40807978901600000118'},{name:'Корр. счет:', value: '40807978901600000118'},{name:'БИК:', value: '30101810400000000555'},{name:'ИНН:', value: '044525555'},{name:'КПП:', value: '7744000912'},{name:'ОГРН:', value: '772201001'}]
+            +b.requisites-block._offset_md
+              each row in data1
+                +e.row
+                  span= row.name
+                  span= row.value
+            +b.requisites-block._offset_sm
+              each row in data2
+                +e.row
+                  span= row.name
+                  span= row.value
+            +b.requisites-block._offset_sm
+              each row in data3
+                +e.row
+                  span= row.name
+                  span= row.value
+            +b.requisites-block._size_lg
+              +e.row
+                span Назначение платежа:
+                span «Перевод средств по Рамочному договору №-______ от « »_______ 201__»

@@ -1,0 +1,7 @@
+mixin currenciesTabs(id, allCurrencies)
+  +b.currencies-tabs( id=id )
+    each item, index in allCurrencies
+      if (index === 0)
+        +e.item._active( data-currency=item[0] )=item[1]
+      else
+        +e.item( data-currency=item[0] )=item[1]

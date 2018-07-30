@@ -1,0 +1,49 @@
+.card
+  padding 40px
+  color #fff
+  background-color $c-red
+  position relative
+  +below('xs')
+    margin-right -15px
+    margin-left -15px
+
+    /.about &
+      padding 25px 15px
+  *
+    color inherit
+
+  &__title
+    /.about &
+      font-size 31px
+      line-height 36px
+      margin-bottom 32px
+
+  &__subtitle
+    margin-bottom 8px
+    font-weight 300
+    &_offset_lg
+      margin-bottom 32px
+    +below('xs')
+      width 80%
+  &__heading
+    margin-bottom 24px
+    &_size_md
+      margin-bottom 32px
+      line-height 44px
+  &__subheading
+    font-size 14px
+    line-height 24px
+    margin-bottom 12px
+    color rgba(#fff, 80%)
+  &__icon
+    position absolute
+    top 40px
+    right 40px
+  &__text
+    margin-bottom 38px
+    line-height 24px
+    font-weight 300
+    &:last-child
+      margin-bottom 0
+  .terms
+    margin-bottom 0

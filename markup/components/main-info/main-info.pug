@@ -1,0 +1,29 @@
+include ../form/form
+
+mixin main-info(data)
+  +b.section._has_no-offset-bottom
+    .container
+      .row
+        +b.main-info.column._md-6._xs-12
+          +e.heading.heading.wow.fadeInUp В помощь трейдеру
+          +e.text.text.wow.fadeInUp Мы собрали всю необходимую информацию для комфортной работы с Альфа-Форекс
+          +b.links.main-info__links
+            +e.A(href="#").item.column._xs-6.wow.fadeInUp
+              +e.icon
+                include ../../static/img/svg/card.svg
+              +e.title Ввод и вывод средств
+            +e.A(href="#").item.column._xs-6.wow.fadeInUp
+              +e.icon
+                include ../../static/img/svg/docs.svg
+              +e.title Регламентирующие документы
+            +e.A(href="#").item.column._xs-6.wow.fadeInUp
+              +e.icon
+                include ../../static/img/svg/metatrade.svg
+              +e.title Работа #[br] c MetaTrader
+            +e.A(href="#").item.column._xs-6.wow.fadeInUp
+              +e.icon
+                include ../../static/img/svg/faq.svg
+              +e.title Остальное в разделе #[br] «Вопрос - Ответ»
+
+        +b.main-form.column._md-6._xs-12.wow.fadeInUp
+          +form()

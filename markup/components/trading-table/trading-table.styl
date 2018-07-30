@@ -1,0 +1,439 @@
+@import '../tabs/tabs'
+
+.trading-conditions
+  margin-bottom 48px
+  +below('xs')
+    &~.content
+      width auto
+      margin-right -15px
+      margin-left -15px
+      margin-bottom 8px
+      padding 0
+
+  &__tabs
+    +below('xs')
+      margin-right -15px
+      margin-left -15px
+
+  &__tab
+    tabsItem()
+
+  &__links
+    display inline-block
+    margin-bottom 40px
+
+  &__link
+    display inline-block
+    cursor pointer
+    font-size $fz-large
+    line-height 1
+    color $c-background_corporate
+    border-bottom 1px solid #525A68
+    opacity .4
+    padding-bottom 6px
+    margin-right 20px
+
+    &:last-child
+      margin-right 0
+
+    &_is_active
+      color $c-darkest
+      text-decoration none
+      opacity 1
+      border-bottom none
+
+    +below('xs')
+      padding-bottom 0
+      line-height 30px
+
+  &__calc
+    justify-content space-between
+    display flex
+    margin-bottom 30px
+
+    +above(768px)
+      justify-content unset
+      height 100%
+      padding-left 0
+
+    +above(1280px)
+      margin-bottom 0
+      align-items center
+      float right
+      margin-top -20px
+
+    .currencies-tabs
+      margin-right 16px
+      +below(768px)
+        display none
+
+    .currencies-dropdown
+      +above(768px)
+        display none
+
+  .amount
+    display flex
+    align-items center
+    +above(768px)
+      padding 14px 19px
+      border-radius 4px
+      border 1px solid #e8e8e8
+      height 100%
+      font-size $fz-large
+    &__label
+      color #a8a8a8
+      font-size 16px
+      +below(768px)
+        display none
+
+  .amount-input
+    margin 0 10px 0 5px
+    text-align center
+    font-size 14px
+    color $c-darkest
+    border none
+    border-bottom 1px solid #e8e8e8
+    outline none
+    padding 0 0 3px 0
+    font-weight 500
+    background-color transparent
+    -moz-appearance textfield
+    width 100%
+
+    +above(340px)
+        max-width 80px
+
+    +above('sm')
+      width 60px
+      font-size 16px
+
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button
+      -webkit-appearance none
+      margin 0
+
+.trading-table
+  width 100%
+  overflow auto
+  padding-top 14px
+  margin-top -14px
+
+  &__table
+    width 100%
+    background-color #fff
+    table-layout fixed
+    +above('sm')
+      width 1120px
+      /.marginal-table &
+        width 100%
+
+  &__head
+    display block // need for IE
+    background-color #fff
+    box-shadow 0 8px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1)
+    // +below('xs')
+    //   display none
+    //   /.marginal-table &
+    //     display block
+
+  &__head-row
+  &__row
+    display flex
+
+  &__head-row
+    /.marginal-table &:nth-child(1) ^[0]__head-cell
+      &:nth-child(2)
+        padding-top 23px
+
+  &__head-cell
+    display flex
+    align-items center
+    line-height 16px
+    color $c-darkest
+    font-weight 500
+    padding 20px 15px
+    height 92px
+    +below('xs')
+      height 70px
+      padding 20px 10px
+
+    &[data-tooltip]
+      cursor help
+    &[data-sortable]
+      cursor pointer
+    &:not(:last-child):not(:last-of-type)
+      &:after
+        content ''
+        position absolute
+        right 0
+        top calc(50% - 20px)
+        height 40px
+        border-right 1px solid $c-light-border
+    &-title
+      user-select none
+      position relative
+      max-width 90%
+      .normal
+        +below(1025px)
+          display none
+      .short
+        +above(1024px)
+          display none
+
+      +below('xs')
+        font-size 12px
+
+  &__tooltip-mark
+    position absolute
+    display inline-block
+    width 5px
+    height 5px
+    border-radius 5px
+    background-color #D8D8D8
+    margin 2px 0 0 4px
+    $transition(background-color)
+    ~/__head-cell:hover &
+      background-color $c-red
+
+  &__sort
+    position absolute
+    right 14px
+    top calc(50% - 5.5px)
+
+    &_asc > svg .up
+      fill $c-red
+
+    &_desc > svg .down
+      fill $c-red
+
+    +below('xs')
+      display none
+
+  &__body
+    display block
+    height 600px
+    max-height 600px
+    overflow-x hidden
+    position relative
+
+  &__content
+    display flex
+    flex-flow column nowrap
+
+  &__row
+    border-bottom 1px solid #E8EAEC
+    height 53px
+    position relative
+    &:nth-child(2n)
+      background-color rgba(#EDEFF3, 24%)
+      &+.mobile-details
+        background-color rgba(#EDEFF3, 24%)
+    +below('xs')
+      flex-wrap wrap
+      height auto
+      overflow hidden
+      max-height 65px
+      $transition(max-height)
+      &:after
+        content url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE2IDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+ICA8cGF0aCBkPSJNNy4yMDc5MiA4LjY3NjE5TC4zMjgzOSAxLjg4NzQxYy0uNDM3ODUtLjQzMTg1LS40Mzc4NS0xLjEzMjAyIDAtMS41NjM2NS40Mzc0NS0uNDMxNjggMS4xNDY5Ny0uNDMxNjggMS41ODQzOSAwbDYuMDg3MzMgNi4wMDcwMkwxNC4wODcyNC4zMjM5M2MuNDM3NjMtLjQzMTY3IDEuMTQ3MDgtLjQzMTY3IDEuNTg0NTMgMCAuNDM3NjQuNDMxNjcuNDM3NjQgMS4xMzE4MSAwIDEuNTYzNjZMOC43OTIxMyA4LjY3NjM3QzguNTczMyA4Ljg5MjIgOC4yODY4IDkgOC4wMDAxNSA5Yy0uMjg2NzkgMC0uNTczNS0uMTA4MDEtLjc5MjIzLS4zMjM4MXoiIGZpbGw9IiNFMzAwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIvPjwvc3ZnPg==")
+        position absolute
+        width 17px
+        height 16px
+        top 25px
+        z-index 3
+        right 40px
+        $transition(transform)
+        /.marginal-table &
+          content none
+      &_is_open
+        max-height 400px
+        &:after
+          transform rotate(180deg)
+
+  &__cell
+  &__head-cell
+    display flex
+    justify-content center
+    align-items center
+    font-size 14px
+    text-align center
+    position relative
+    &:nth-child(1)
+      +below('xs')
+        width 120px
+        & ^[0]__cell-value
+          font-weight 500
+        &:after
+          content ''
+          position absolute
+          right 0
+          top calc(50% - 20px)
+          height 40px
+          border-right 1px solid $c-light-border
+
+    /.specifications-table &
+      &:nth-child(1)
+        width 157px
+        min-width 157px
+      &:nth-child(2)
+        font-weight 500
+        width 184px
+        +below('xs')
+          &:after
+            content none
+      &:nth-child(3)
+        width 190px
+      &:nth-child(4)
+        width 200px
+      &:nth-child(5)
+      &:nth-child(6)
+        width 190px
+      +below('xs')
+        justify-content flex-start
+        padding 24px 15px
+        &:not(:first-child):not(:nth-child(2))
+          display none
+    /.marginal-table &
+      min-width 25%
+      width 25%
+      &:nth-child(4)
+        font-weight 500
+
+  &__cell
+    line-height 20px
+    color $c-darkgray
+    padding 13px 15px 10px
+    +below('xs')
+      padding 24px 25px 20px
+      justify-content flex-start
+      text-align left
+
+      &:after
+        /.marginal-table &
+          content none
+
+      /.marginal-table &
+        padding 24px 10px 20px
+        justify-content center
+        text-align center
+
+    /.specifications-table &
+        +below('xs')
+            justify-content flex-start
+        &:nth-child(2)
+            +below('xs')
+                width unset
+
+  &__cell-title
+    display none
+    +below('xs')
+      width 100%
+      color $c-darkest
+      font-weight 500
+
+  &__cell-value
+    +below('xs')
+      color $c-darkest
+      white-space nowrap
+    &_is_dynamic-up
+      font-weight 500
+      color $c-green
+      position relative
+      &::after
+          content ''
+          width 6px
+          height 4px
+          position absolute
+          right calc(50% - 3px)
+          bottom -4px
+          background url('%=static=%minified-svg/arrow-down-green.svg')
+          background-repeat no-repeat
+          background-size cover
+          transform rotateX(180deg)
+          +below('xs')
+            bottom -6px
+
+    &_is_dynamic-down
+      font-weight 500
+      color $c-ui_red
+      position relative
+      margin-left -6px
+      &::after
+          content ''
+          width 6px
+          height 4px
+          position absolute
+          right calc(50% - 6px)
+          bottom -4px
+          background url('%=static=%minified-svg/arrow-down-red.svg')
+          background-repeat no-repeat
+          background-size cover
+          +below('xs')
+            bottom -6px
+
+  &__placeholder
+    height 600px
+    display flex
+    justify-content flex-start
+    align-items center
+    +above('sm')
+      width calc(100% - 13px)
+
+    &-text
+      font-weight 400
+      line-height 1.25
+      position absolute
+      width 100%
+      padding 0 10px
+      text-align center
+
+    &-spinner
+      position absolute
+      border-radius 50%
+      width 52px
+      height 52px
+      left calc(50% - 26px)
+      border 4px solid $c-light-border
+      border-top-color $c-red
+      animation spin 1s infinite linear
+
+  &__mobile-details
+    display flex
+    width calc(100% - 18px)
+    padding 16px 25px 24px 15px
+    +above('sm')
+      display none
+
+.specifications-mobile
+  width 100%
+  &__cell
+    display flex
+    justify-content space-between
+    padding 12px 0
+    .trading-table__cell-title
+      display block
+      font-size 14px
+      font-weight 500
+    //   &:after
+    //     content ':'
+    //     margin-left -3px
+    .trading-table__cell-value
+      font-size 14px
+
+.marginal-mobile
+  border 1px solid $c-light-border
+  border-layout fixed
+  &__head-row
+  &__row
+    height 47px
+  &__cell
+  &__head-cell
+    font-size 14px
+    border 1px solid $c-light-border
+    padding 9px
+    text-align center
+    span
+      white-space pre-line
+  &__head-cell
+    font-weight 400

@@ -1,0 +1,32 @@
+.linksbar
+  display flex
+  justify-content space-between
+  align-items center
+  &_vertical-normal
+  &_vertical
+    flex-direction column
+    align-items flex-start
+  &_vertical
+    margin-bottom 40px
+  &__col
+    ^[0]_vertical-normal &
+    ^[0]_vertical &
+      display flex
+      flex-direction column
+  &__link
+    margin-right 23px
+    font-size $fz-small
+    line-height 1.225
+    color $c-lightgray
+    ^[0]_vertical-normal &
+      margin-bottom 10px
+      &:last-child
+        margin-bottom 0
+    ^[0]_vertical &
+      font-size $fz-medium
+      margin-bottom 15px
+      color $c-darkgray
+      &:hover
+        color $c-red
+    &:last-child
+      margin-right 0

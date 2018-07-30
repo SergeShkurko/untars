@@ -1,0 +1,61 @@
+mixin how-to-start(data)
+  section.section
+    .container
+      +b.heading._center._for_element.wow.fadeInUp Как начать?
+      +b.how-to-start
+        +e.links.wow.fadeInUp
+          +e.link._is_active(data-target="1")
+            +e.SPAN.link-text Вы наш клиент
+          +e.link(data-target="2")
+            +e.SPAN.link-text Вы ещё не наш клиент
+        +e.tabs.wow.fadeInUp
+          +e.tab._is_active._is_show(data-tab="1")
+            +e.items
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/safe.svg
+                .feature__title Создайте #[br]торговый счет
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/mobile-pay.svg
+                .feature__title Пополните #[br] счет
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/terminal.svg
+                .feature__title Скачайте #[br] торговый терминал
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/trade-start.svg
+                .feature__title Зарабатывайте #[br]с нами
+            +e.button
+              +b.BUTTON.button
+                +e.content
+                  +e.icon
+                    include ../../static/img/svg/enter.svg
+                  +e.text Войти в личный кабинет
+          +e.tab(data-tab="2")
+            +e.items
+              +e.item.feature
+                .feature__icon.feature__icon_office
+                  include ../../static/img/svg/office.svg
+                .feature__title Посетите отделение #[br] Альфа-Банка
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/pc.svg
+                .feature__title Получите доступ #[br] к интернет-банку
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/safe.svg
+                .feature__title Создайте #[br]торговый счет
+              +e.item.feature
+                .feature__icon
+                  include ../../static/img/svg/trade-start.svg
+                .feature__title Зарабатывайте #[br]с нами
+            +e.button
+              +b.BUTTON.button._theme_white._theme_on_white._is_bold(data-modal-target="map")
+                +e.content
+                  +e.icon._stroked
+                    include ../../static/img/svg/pin.svg
+                  +e.text Найти ближайшее отделение
+
+

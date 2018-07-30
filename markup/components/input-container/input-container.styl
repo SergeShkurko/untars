@@ -1,0 +1,130 @@
+$transition-timing-function = ease
+$transition-duration = .3s
+
+.input-container
+  padding 30px 0 0
+  min-height 110px
+  width 100%
+  font-size 16px
+  $transition(opacity)
+
+  textarea
+  select
+  input
+  .select2-selection
+    width 100%
+    background-color transparent
+    border none
+    border 1px solid rgba(0,0,0,.1)
+    border-radius 2px
+    outline none
+    font-family inherit
+    font-size inherit
+    box-sizing border-box
+
+    &:-webkit-autofill
+      -webkit-box-shadow 0 0 0 30px #fff inset
+      // -webkit-text-fill-color inherit !important
+
+  textarea
+    padding 15px
+    max-width 100%
+    min-width 100%
+    min-height 60px
+
+  input
+    padding 0 15px
+    height 60px
+
+  select
+    height 60px
+
+    &[multiple]
+      opacity 0
+
+
+  &_has_error
+    input
+      border-color #f55
+
+  &_is_valid
+    input
+      border-color #0fb
+
+  &__icon
+  &__button
+    width 60px
+    height 60px
+    position absolute
+    top 0
+    display flex
+    align-items center
+    justify-content center
+
+    &_direction
+      &_left
+        left 0
+        & ~ ^[0]__input
+          padding-left 60px
+
+        & ~ ^[0]__placeholder
+          padding-left 45px
+
+      &_right
+        right 0
+        & ~ ^[0]__input
+          padding-right 60px
+
+  &__icon
+    &:not([data-tooltip])
+      pointer-events none
+
+    &[data-tooltip]
+      cursor help
+
+  &__button
+    background-color transparent
+    border none
+    outline none
+
+  &__control
+    position relative
+
+  &__placeholder
+    font-size 16px
+    line-height 26px
+    font-weight normal
+
+    position absolute
+    left 0
+    top 0
+    pointer-events none
+    transform-origin top left
+    transition transform, opacity, font-weight, color, padding
+    transition-timing-function $transition-timing-function
+    transition-duration $transition-duration
+
+    transform translate3d(15px, 16px, 0)
+
+    ~/_has_focus &
+    ~/_has_value &
+    ~/_has_datepicker &
+    ~/ select:not([multiple]) + &
+    ~/ input[placeholder] + &
+      transform translate3d(0px, -28px, 0)
+      padding 0
+      opacity 1
+      font-weight bold
+      color #ffffff
+
+    ~/ input[disabled] + &
+      opacity (1/3)
+
+  &__description
+  &__errors
+    font-size 14px
+    line-height 24px
+
+  // &__description
+    // font-size 14px
+

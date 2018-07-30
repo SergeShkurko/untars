@@ -1,0 +1,10 @@
+mixin swith(id, onText, offText)
+  - var offId = `switch-off-${Math.random().toString('36')}`
+  - var onId = `switch-on-${Math.random().toString('36')}`
+
+  +b.switch( id=id )
+    +e.INPUT.input(id=offId, type='radio', name='view', value='off')
+    +e.LABEL.label._off(for=offId)=offText
+    +e.INPUT.input(id=onId, type='radio', name='view', value='on', checked='')
+    +e.LABEL.label._on(for=onId)=onText
+    +e.SPAN.selection

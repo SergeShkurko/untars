@@ -1,0 +1,147 @@
+.big-card
+  padding 105px 365px 95px 85px
+  color #fff
+  background-color $c-red
+  position relative
+  margin-top -40px
+  &_size_medium
+    padding 70px 365px 70px 85px
+  +below('sm')
+    padding 80px 280px 80px 80px
+  +below('xs')
+    padding 32px 25px
+    margin-right -15px
+    margin-left -15px
+    height 640px
+  &.metatrader-card
+    +below('xs')
+      height 740px
+  *
+    color inherit
+  &__content
+    position relative
+    z-index 2
+    +below('xs')
+      max-width 320px
+      height 100%
+      display flex
+      flex-direction column
+  &__subtitle
+    margin-bottom 24px
+    font-weight 300
+    font-size $fz-xlarge
+    line-height 28px
+    &_size_small
+      font-size $fz-medium
+      line-height 24px
+  &__title
+    margin-bottom 30px
+    font-size 120px
+    line-height 0.8
+    font-weight 300
+    display flex
+    align-items flex-start
+    +below('md')
+      font-size 80px
+    +below('sm')
+      font-size 65px
+    +below('xs')
+      font-size 49px
+    &_size_medium
+      $font-size($fz-triple)
+      line-height 1
+      +below('xs')
+        $font-size($fz-double)
+    &_is_marked
+      &:after
+        content ''
+        background-color #fff
+        width 8px
+        height 8px
+        border-radius 8px
+        margin-top 17px
+        margin-left 11px
+        +below('md')
+          margin-top 10px
+        +below('sm')
+          margin-top 9px
+          margin-left 9px
+          width 5px
+          height 5px
+        +below('xs')
+          margin-top 7px
+          margin-left 7px
+  &__text
+    line-height 26px
+    color rgba(#fff, 80%)
+    margin-bottom 48px
+    max-width 450px
+  &__buttons
+    display flex
+    flex-wrap wrap
+    align-items center
+    .button
+      margin-right 36px
+  &__link
+    font-size 14px
+    text-decoration underline
+    ~/__buttons .button + &
+      +below('xs')
+        margin-top 24px
+  &__tip
+    font-size $fz-small
+    position relative
+    color rgba(#fff, 80%)
+    display flex
+    align-items flex-start
+    z-index 2
+    ~/__buttons + &
+      margin-top 32px
+      +below('xs')
+        margin-top auto
+    &:before
+      content ''
+      margin-right 9px
+      margin-top 4px
+      background-color #fff
+      width 4px
+      height 4px
+      flex-shrink 0
+      border-radius 4px
+  &__media
+    position absolute
+    bottom 0
+    right 0
+    display flex
+    overflow hidden
+    +below('sm')
+      width 325px
+    +below('xs')
+      height 74.375%
+      width 319px
+      z-index 1
+    +below(460px)
+        width 260px
+        height 60%
+    /.metatrader-card &
+      +below('sm')
+        width 380px
+      +below('xs')
+        height auto
+        width auto
+      +below(600px)
+        width 360px
+      +below(480px)
+        width 320px
+  &__img-wrap
+    position relative
+    display flex
+    align-items flex-end
+    +below('md')
+      right -25px
+    +below('xs')
+      right -62px
+  &__img
+    max-width 100%
+    vertical-align bottom
+

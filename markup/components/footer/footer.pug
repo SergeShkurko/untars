@@ -1,0 +1,31 @@
+include ../logo/logo
+
+mixin footer(data)
+  +b.FOOTER.page-footer
+    +e.top.container.wow.fadeInUp
+      +e.col
+        +e.logo
+          +logo()
+      +e.col
+        +e.content
+          +b.header-content
+            +e.text #[nobr 8 800 800 900]
+            +e.title с 9:00 до 18:00 мск
+        +e.button
+          +b.BUTTON.button
+            +e.content
+              +e.icon
+                include ../../static/img/svg/enter.svg
+              +e.text Личный кабинет
+    +e.center.wow.fadeInUp
+      .container
+        +navbar('in_footer').page-footer__navbar
+    +e.bottom.wow.fadeInUp
+      .container
+        +b.NAV.linksbar.page-footer__linksbar
+          +e.col
+            +e.link © 2018 Альфа-Форекс. Все права защищены.
+          +e.col
+            +e.A.link.link(href='#') Политика конфиденциальности
+            +e.A.link.link(href='#') Раскрытие информации
+        +e.policy Клиент не должен рисковать на сумму большую, чем та, которую он готов потерять. Прежде чем решиться на торговлю, Клиенту необходимо удостовериться, что он осознает связанные с этим риски, и принять во внимание свой опыт. Клиент, в случае необходимости, может обратиться за консультацией независимого финансового специалиста. Пожалуйста, прочитайте Уведомление о рисках Альфа-Форекс.

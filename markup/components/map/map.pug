@@ -1,0 +1,29 @@
+include ./sidebar/sidebar
+
+mixin map(data)
+  +b.popup(data-modal='map')
+    +e.content
+      +e.container.container
+        +e.body.map-wrapper
+          +e.controls-bar
+            +b.map-select
+              +e.SELECT.select(name="city")
+                option(value="Москва")
+                option(value="Санкт-петербург")
+                option(value="Тюмень")
+                option(value="Казань")
+                option(value="Новосибирск")
+                option(value="Ростов-на-Дону")
+                option(value="Волгоград")
+                option(value="Владивосток")
+                option(value="Ижевск")
+                option(value="Самара")
+                option(value="Саратов")
+                option(value="Глазго")
+                option(value="Нью-Йорк")
+                option(value="Город N")
+                option(value="Готэм")
+            +e.close-button
+              +e.close-icon
+                include ../../static/img/svg/cross.svg
+          .map-container#map(data-url='/requestData.json')

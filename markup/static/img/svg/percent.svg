@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Percent" width="87" height="89">
+    <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+        <path fill="#E0E4EB" d="M63.9493529,20.6737355 L72.4397101,12.2425676 L72.4118923,12.1728095 C80.5126831,20.193475 85.5350932,31.348094 85.5350932,43.6821113 C85.5350932,68.1046396 65.8433432,87.9030106 41.5523384,87.9030106 C41.3190951,87.9030106 41.0862758,87.9011852 40.8538939,87.8975478 L41.509969,87.6808507 L41.3052848,75.3717361 C58.8085232,75.0817982 72.9086781,60.7257707 72.9086781,43.0586442 C72.9086781,34.3696129 69.4980468,26.4814903 63.9493529,20.6737355 Z" class="shadow"/>
+        <path stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M 18.020033,14.99949 C 24.331913,9.9912312 32.316637,7 41,7 61.434536,7 78,23.565464 78,44 78,64.434536 61.434536,81 41,81 20.565464,81 4,64.434536 4,44 4,39.808015 4.6971296,35.778853 5.9817801,32.022123" class="innerLine"/>
+        <path stroke="#6F86A2" stroke-linecap="round" d="M 13.672472,9.5129066 C 21.178491,3.5571398 30.673838,0 41,0" class="outerLine"/>
+        <polyline stroke="#6F86A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="1.05070267 36.8014443 5.1468562 32.0544877 10.0510119 36.5266848" class="arrowTip" transform="rotate(21 5.550857 34.427966)"/>
+        <circle cx="31.5" cy="34.5" r="5.5" stroke="#E30000" stroke-width="2" class="cirleTop"/>
+        <circle cx="49.5" cy="53.5" r="5.5" stroke="#E30000" stroke-width="2" class="cirleBottom"/>
+        <path stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M54,31 L28,57" class="percentLine"/>
+    </g>
+</svg>

@@ -1,0 +1,14 @@
+mixin controls()
+  +b.MENU.controls
+    +e.BUTTON.item._bordered.js-toggle-menu
+      +e.icon
+        +b.burger
+          +e.line
+          +e.line
+          +e.line
+    +e.BUTTON.item.js-toggle-search.hidden-sm
+      +e.icon
+        include ../../../../static/img/svg/search-icon.svg
+    +e.BUTTON.item.button.visible-only-sm
+      +e.icon
+        include ../../../../static/img/svg/enter.svg

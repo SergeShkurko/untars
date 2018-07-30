@@ -1,0 +1,47 @@
+extends _template.pug
+include ../components/breadcrumbs/breadcrumbs
+include ../components/files-list/files-list
+block body
+  +b.SECTION.section._theme_content._size_xsmall
+    .container
+      +breadcrumbs(['Главная', 'Документы'])
+      +b.content-head
+        +b.H1.h1 Документы
+      +b.content
+        +e.main
+          +b.accordion-pane
+            +e.header
+              +e.title Рамочный договор
+              +e.subtitle Общества с ограниченной ответственностью «Альфа-Форекс»
+              +e.icon
+                include ../static/img/svg/chevron-red.svg
+            +e.body
+              +files-list()
+          +b.accordion-pane
+            +e.header
+              +e.title Декларация о рисках
+              +e.subtitle
+                | Декларация о рисках, связанных с заключением, исполнением и прекращением обязательств 
+                | по Рамочному договору и Отдельным договорам
+              +e.icon
+                include ../static/img/svg/chevron-red.svg
+            +e.body
+              +files-list()
+          +b.accordion-pane
+            +e.header
+              +e.title Тарифы и комиссионные сборы
+              +e.subtitle Общества с ограниченной ответственностью «Альфа-Форекс»
+              +e.icon
+                include ../static/img/svg/chevron-red.svg
+            +e.body
+              +files-list()
+          +b.accordion-pane
+            +e.header
+              +e.title Порядок и условия определения котировок
+              +e.subtitle 
+                | Порядок и условия определения котировок, по которым заключаются отдельные договоры
+                | Общества с ограниченной ответственностью «Альфа-Форекс»
+              +e.icon
+                include ../static/img/svg/chevron-red.svg
+            +e.body
+              +files-list()

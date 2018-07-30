@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="48">
+  <defs>
+    <rect id="a" width="66" height="66"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g>
+      <g transform="translate(-2 -9)">
+        <mask id="b" fill="#fff">
+          <use xlink:href="#a"/>
+        </mask>
+        <g mask="url(#b)">
+          <g transform="translate(1.3571 8.6429)">
+            <rect width="59.29" height="45.9286" x="1.6429" y="1.3571" stroke="#FFF" stroke-width="2" rx="2"/>
+            <path stroke="#FFF" stroke-linecap="round" d="M61.5,7.85714286 L1.78571429,7.85714286"/>
+            <path stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M7.28571429,4.71428571 L5.71428571,4.71428571"/>
+            <path stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M12,4.71428571 L10.4285714,4.71428571"/>
+            <path stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M16.7142857,4.71428571 L15.1428571,4.71428571"/>
+          </g>
+        </g>
+        <polyline stroke="#F50032" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="14.9933 36.046 19.0381 32.0247 23.0356 32.0247 28.0385 27.0267" mask="url(#b)"/>
+        <polyline stroke="#FFF" stroke-linejoin="round" points="11.5 24 11.5 39.5 31 39.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M11,46.5 L17,46.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M20,46.5 L31,46.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M42,46.5 L54,46.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M42,39.5 L54,39.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M42,32.5 L54,32.5" mask="url(#b)"/>
+        <path stroke="#FFF" d="M42,25.5 L54,25.5" mask="url(#b)"/>
+      </g>
+    </g>
+  </g>
+</svg>

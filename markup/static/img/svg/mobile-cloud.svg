@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="86px" viewBox="0 0 53 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 21 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3_internet/mob/meta_trading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="АФ_MetaTrader" transform="translate(-468.000000, -3869.000000)">
+            <g id="Group-2" transform="translate(394.000000, 3852.000000)">
+                <g id="Group-21-Copy-2" transform="translate(40.000000, 0.000000)">
+                    <rect id="Rectangle-7-Copy-5" x="0" y="0" width="120" height="120"></rect>
+                    <polygon id="Rectangle-15" fill="#EDEFF3" points="36 28 85 28 85 92 36 92"></polygon>
+                    <path d="M48,23 L53,23" id="Path-10-Copy" stroke="#283139" stroke-width="2"></path>
+                    <path d="M59,23 L69,23" id="Path-10-Copy-2" stroke="#283139" stroke-width="2"></path>
+                    <path d="M86,97 L86,75 C86,71.1429083 86,71.1429083 86,63.583374 C86,54.7896921 86,54.7896921 86,44.7618628 C86,32.8454158 86,32.8454158 86,23 C86,20.2385763 83.7614237,18 81,18 L40,18 C37.2385763,18 35,20.2385763 35,23 L35,97 C35,99.7614237 37.2385763,102 40,102 L81,102 C83.7614237,102 86,99.7614237 86,97 Z" id="Rectangle-3" stroke="#6F86A2" stroke-width="2"></path>
+                    <path d="M34,27.5 L86,28" id="Path-10" stroke="#6F86A2"></path>
+                    <path d="M34,91.5 L86,91.5" id="Path-10-Copy-3" stroke="#6F86A2"></path>
+                    <path d="M48,23 L53,23" id="Path-10-Copy" stroke="#6F86A2" stroke-width="2"></path>
+                    <path d="M59,23 L69,23" id="Path-10-Copy-2" stroke="#6F86A2" stroke-width="2"></path>
+                    <path d="M56,97 L65,97" id="Path-10-Copy-4" stroke="#6F86A2" stroke-width="2"></path>
+                    <path d="M57.4769388,64 L52,64 C49.2385763,64 47,61.7614237 47,59 C47,56.2385763 48.9946571,54.0001231 51.7560808,54.0001231 C51.7679111,54.0001231 52.023651,54.0000411 52.035462,54.0001231 C52.047273,54.0002052 52,53.6698033 52,53.5 C52,51.5670034 53.5670034,50 55.5,50 C56.4474257,50 57.3069287,50.376442 57.9370961,50.9879132 C57.9777485,51.0273595 58.0174464,51.0677838 58.0561521,51.1091484 C58.0948577,51.1505129 58.0748277,50.9704563 58.0856789,50.9016028 C58.6127185,47.5574104 61.5077016,45 65,45 C68.8659932,45 72,48.1340068 72,52 C72,52.913742 71.8249247,53.7865929 71.5064891,54.5868378 C71.49723,54.6101064 71.4878497,54.6333136 71.4783489,54.6564587 C71.4688482,54.6796037 71.5363522,54.6900144 71.5650753,54.7072143 C73.0236185,55.5806169 74,57.1762854 74,59 C74,61.7614237 71.7614237,64 69,64 L65.4286655,64" id="Combined-Shape" stroke="#6F86A2" stroke-linecap="round"></path>
+                    <path d="M61,75 L61,62" id="Path-7" stroke="#E30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M57,67 L57,74.5 C57,74.7761424 57.2238576,75 57.5,75 L65,75" id="Path-3" stroke="#E30000" stroke-width="2" stroke-linecap="round" transform="translate(61.000000, 71.000000) rotate(-45.000000) translate(-61.000000, -71.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

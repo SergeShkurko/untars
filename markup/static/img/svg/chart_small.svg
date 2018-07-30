@@ -1,0 +1,23 @@
+<svg width="64px" height="72px" viewBox="0 0 64 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-10, -5)">
+      <path d="M11,76 L73,76" id="Path-4" stroke="#6F86A2" stroke-width="2" stroke-linecap="round" ></path>
+      <rect id="Rectangle-14" fill="#EDEFF3"  x="35" y="38" width="14" height="37"></rect>
+      <rect id="Rectangle-14-Copy" fill="#E0E4EB"  x="35" y="38" width="7" height="37"></rect>
+      <polyline id="Path-5" stroke="#6F86A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  points="15 76 15 48 29 48 29 76"></polyline>
+      <polyline id="Path-5-Copy" stroke="#6F86A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  points="35 76 35 38 49 38 49 76"></polyline>
+      <polyline id="Path-5-Copy-2" stroke="#6F86A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  points="55 76 55 28 69 28 69 76"></polyline>
+      <path d="M15,36.9939756 L16.0178557,36 M20.0178557,32 L34.434521,19.0650744 L40.7714418,23.9930134 L59.1704229,6.13014876" id="Path-7" stroke="#E30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ></path>
+      <polyline id="Path-6" stroke="#E30000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  points="51 6 59 6 59 13"></polyline>
+      <path d="M69,39 L55,49.0032855" id="Path-23-Copy-6" stroke="#6F86A2" ></path>
+      <path d="M69,32 L55,42.0032855" id="Path-23-Copy-12" stroke="#6F86A2" ></path>
+      <path d="M65,28 L55,35.0032855" id="Path-23-Copy-13" stroke="#6F86A2" ></path>
+      <path d="M27,48 L15,56.0032855" id="Path-23-Copy-2" stroke="#6F86A2" ></path>
+      <path d="M69,46 L55,56.0032855" id="Path-23-Copy-7" stroke="#6F86A2" ></path>
+      <path d="M29,53 L15,63.0032855" id="Path-23-Copy-3" stroke="#6F86A2" ></path>
+      <path d="M69,53 L55,63.0032855" id="Path-23-Copy-8" stroke="#6F86A2" ></path>
+      <path d="M29,60 L15,70.0032855" id="Path-23-Copy-4" stroke="#6F86A2" ></path>
+      <path d="M69,60 L55,70.0032855" id="Path-23-Copy-9" stroke="#6F86A2" ></path>
+      <path d="M28.5927934,67 L16,75.9978077" id="Path-23-Copy-5" stroke="#6F86A2" ></path>
+      <path d="M68.5927934,67 L56,75.9978077" id="Path-23-Copy-10" stroke="#6F86A2" ></path>
+    </g>
+</svg>

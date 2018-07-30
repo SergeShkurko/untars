@@ -1,0 +1,26 @@
+<svg id="Chart" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="88">
+    <g fill="none" transform="translate(0 1)">
+        <rect class="bar-2-fill" width="14" height="40" x="24" y="45" fill="#EDEFF3"/>
+        <rect class="bar-2-fill" width="7" height="40" x="24" y="45" fill="#E0E4EB"/>
+        <polyline class="bar-1" stroke="#6F86A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="4 86.0043385 4 54 18 54 18 86.0043385"/>
+        <polyline class="bar-2" stroke="#6F86A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="24 86.0043385 24 45 38 45 38 86.0043385"/>
+        <polyline class="bar-3" stroke="#6F86A2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="44 86 44 34 58 34 58 86"/>
+        <path class="bar-4" stroke="#6F86A2" stroke-linecap="square" stroke-linejoin="round" stroke-width="2" d="M65,86 L65,70 M65,64 L65,58 M65,52 L65,24 L79,24 L79,86"/>
+        <path class="arrow" stroke="#E30000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4,33.9939756 L5.0178557,33 M9.0178557,29 L26.071852,12.0129428 L36.0926345,21.9948882 L58.0178557,0"/>
+        <polyline class="arrow-tip" stroke="#E30000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="50 0 58 0 58 7"/>
+        <path class="bar-3-fill bar-3-fill-1" stroke="#6F86A2" d="M57.5927934,77 L45,85.9978077"/>
+        <path class="bar-3-fill bar-3-fill-2" stroke="#6F86A2" d="M58,70 L44,80.0032855"/>
+        <path class="bar-3-fill bar-3-fill-3" stroke="#6F86A2" d="M58,63 L44,73.0032855"/>
+        <path class="bar-3-fill bar-3-fill-4" stroke="#6F86A2" d="M58,56 L44,66.0032855"/>
+        <path class="bar-3-fill bar-3-fill-5" stroke="#6F86A2" d="M58,49 L44,59.0032855"/>
+        <path class="bar-3-fill bar-3-fill-6" stroke="#6F86A2" d="M58,42 L44,52.0032855"/>
+        <path class="bar-3-fill bar-3-fill-7" stroke="#6F86A2" d="M58,35 L44,45.0032855"/>
+        <path class="bar-3-fill bar-3-fill-8" stroke="#6F86A2" d="M49.7236425,34.0046079 L44,38.0942673"/>
+        <path class="bar-1-fill bar-1-fill-1" stroke="#6F86A2" d="M17.5927934,77 L5,85.9978077"/>
+        <path class="bar-1-fill bar-1-fill-2" stroke="#6F86A2" d="M18,70 L4,80.0032855"/>
+        <path class="bar-1-fill bar-1-fill-3" stroke="#6F86A2" d="M18,63 L4,73.0032855"/>
+        <path class="bar-1-fill bar-1-fill-4" stroke="#6F86A2" d="M18,56 L4,66.0032855"/>
+        <path class="bar-1-fill bar-1-fill-5" stroke="#6F86A2" d="M11.0157261,53.9904061 L4,59.0032855"/>
+      <path class="bottom" stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M0,86 L83,86"/>
+    </g>
+</svg>

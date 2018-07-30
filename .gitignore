@@ -1,0 +1,11 @@
+node_modules
+
+development
+staging
+production
+
+.DS_Store
+._.DS_Store
+
+.idea
+npm-debug.log

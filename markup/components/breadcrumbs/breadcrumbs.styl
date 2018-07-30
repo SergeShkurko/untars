@@ -1,0 +1,44 @@
+.breadcrumbs
+  display flex
+  margin-bottom 38px
+
+  +below('xs')
+    display none
+
+.breadcrumb
+  position relative
+  font-size $fz-small
+  line-height $fz-small + 3px
+
+  &:not(:last-child)
+    margin-right 25px
+    &:after
+      content ''
+      display block
+      width: 5px
+      height: 5px
+      position: absolute
+      transform: rotate(45deg)
+      left: calc(100% + 8px)
+      top: calc(50% - 4px)
+      border-right: 1px solid #4D555C
+      border-top: 1px solid #4D555C
+      /.breadcrumbs_theme_light &
+        border-color rgba(#fff, 40%)
+
+  &__title
+    color $c-darker
+    font-weight 500
+    /.breadcrumbs_theme_light &
+      color #fff
+
+  &__link
+    color $c-lightgray
+    font-weight normal
+    transition .3s ease
+    /.breadcrumbs_theme_light &
+      color rgba(#fff, 40%)
+    &:hover
+      color $c-gray
+      /.breadcrumbs_theme_light &
+        color rgba(#fff, 80%)

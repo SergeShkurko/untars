@@ -1,0 +1,52 @@
+-
+  var data = [{
+     value: 'EUR/USD',
+     title: 'Символ',
+     key: 'symbol',
+     sortable: true
+ }, {
+     value: '0.7 (1)',
+     title: 'Спред',
+     key: 'spread',
+     tooltip: true,
+     tooltipTitle: 'Своп по рублевым инструментам, а также USDCAD списывается/начисляется в тройном размере с четверга на пятницу'
+ }, {
+     value: '100 000 EUR',
+     title: 'Размер контрактов',
+     key: 'contracts'
+ }, {
+     value: 3,
+     title: 'Уровни Limit&Stop, пунктов',
+     key: 'levels',
+     tooltip: true,
+     tooltipTitle: 'Минимальное расстояние от уровня размещаемого ордера (отложенного ордера) до текущей рыночной цены',
+     sortable: false
+ }, {
+     value: '0.7',
+     title: 'Своп long',
+     key: 'swap-long',
+     tooltip: true,
+     tooltipTitle: 'Комиссия за перенос позиции через ночь зависит от ставок своп торгуемых валютных пар',
+     sortable: true
+ }, {
+     value: '0.26',
+     title: 'Своп short',
+     tooltip: true,
+     key: 'swap-short',
+     tooltipTitle: 'Комиссия за перенос позиции через ночь зависит от ставок своп торгуемых валютных пар',
+     sortable: true
+ }];
+
++b.trading-table.specifications-table
+  +e.TABLE.table
+    +e.THEAD.head
+      +e.TR.head-row
+        each cell in data
+          +e.TH.head-cell(data-column-key=cell.key data-tooltip=cell.tooltip, data-title=cell.tooltipTitle data-sortable=cell.sortable)
+            +e.SPAN.head-cell-title=cell.title
+              if cell.tooltip
+                +e.SPAN.tooltip-mark
+            if cell.sortable
+              +e.sort
+                include ../../../static/img/svg/sort.svg
+    +e.TBODY.body

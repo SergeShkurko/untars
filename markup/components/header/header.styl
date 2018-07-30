@@ -1,0 +1,181 @@
+$transition-duration = .3s
+
+.page-header
+  background #fff
+  position relative
+  &_is_shown
+    height 100vh
+  &__linksbar
+    padding-top 20px
+    +below('sm')
+      display none
+  &__footer
+    border-top 1px solid $c-background_default
+    border-bottom 1px solid $c-background_default
+    +below('sm')
+      display none
+  &__navbar
+    margin-bottom -1px
+  &__central
+    +below('sm')
+      border-bottom 1px solid $c-background_default
+      border-top 1px solid $c-background_default
+  &__central-content
+    position relative
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    padding-top 30px
+    padding-bottom 30px
+    +below('sm')
+      padding-top 20px
+      padding-bottom 20px
+  &__logo
+    width 192px
+    height 50px
+    margin-right 40px
+    flex-shrink 0
+    display flex
+    align-items center
+    margin-top -10px
+    +below('md')
+      margin-right 25px
+    +below('sm')
+      margin-right 35px
+    +below('xs')
+      width 180px
+      margin-right 10px
+      flex-shrink 1
+  &__controls
+    +below('md')
+      order 1
+    +above('md')
+      height 100%
+      margin-right 25px
+      margin-top -10px
+  &__col
+    display flex
+    align-items center
+    z-index 1
+    +above('sm')
+      min-height 60px
+    +below('md')
+      ^[0]_is_shown &
+        width 100%
+    +below('sm')
+      width 100%
+      justify-content space-between
+
+    form[action]
+      +below('xs')
+        display none
+  &__content
+    margin-right 55px
+    margin-left auto
+    +below('sm')
+      margin-right 15px
+  // &__button
+  & &__searchbar
+    width 625px
+    display block
+    +below('md')
+      width 100%
+  &__collapsed
+    position absolute
+    top 180px
+    bottom 0
+    z-index 2
+    overflow auto
+    width 100%
+    padding 0 0 60px
+    background-color #fff
+    height calc(100vh - 180px)
+    margin-top -50px
+    +below('md')
+      margin-top 0
+      top 130px
+      height calc(100vh - 130px)
+    +below('sm')
+      top 141px
+      height calc(100vh - 141px)
+      padding 30px 0 60px
+    +below('xs')
+      top 138px
+      height calc(100vh - 138px)
+      padding 30px 0 80px
+  &__mobile-callback
+    padding 12px 0
+    +above('md')
+      display none
+
+  &__button
+    margin-right 16px
+
+    &:last-child
+      margin-right 0
+
+.header-collapsed .row > *:nth-child(2),
+.header-collapsed .row > *:nth-child(4)
+  padding-top 50px
+
+
+.header-content
+  &__title
+    display block
+    font-size $fz-small
+    line-height 1.225
+    color $c-lightgray
+    margin-bottom 8px
+    display flex
+    align-items center
+    &_size_md
+      font-size 15px
+      line-height 17px
+    &_theme_dark
+      color $c-gray
+    ^[0]_in_collapsed &
+      color $c-darkgray
+      font-size 15px
+      line-height 17px
+  &__icon
+    stroke $c-lightgray
+    margin-right 14px
+    display flex
+    align-items center
+  &__text
+    color $c-darkest
+    font-size $fz-xlarge
+    line-height 32px
+    white-space nowrap
+    ^[0]_in_collapsed &
+      font-size $fz-xxl
+  &__link
+    line-height 24px
+    color $c-darkest
+    text-decoration underline
+    $transition(color)
+    &:hover
+      color $c-red
+
+.searchbar
+  border none
+  border-bottom 1px solid $c-background_default
+  outline none
+  padding 9px 0
+  font-weight 500
+  width 100%
+  background-color transparent
+  &::placeholder
+    color $c-lightgray
+
+@keyframes fade-in
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+@keyframes fade-out
+  0%
+    opacity 1
+  100%
+    opacity 0

@@ -1,0 +1,100 @@
+@import '../tabs/tabs'
+
+.input-output
+
+  &__tab
+    tabsItem()
+    &_is_active
+      display block
+
+  &__links
+    display flex
+    flex-wrap wrap
+    margin-bottom 40px
+
+  &__link
+    cursor pointer
+    font-size $fz-large
+    line-height 1
+    color $c-background_corporate
+    border-bottom 1px solid #525A68
+    opacity .4
+    padding-bottom 6px
+    display block
+    margin-right 20px
+
+    &:hover
+      opacity 0.75
+
+    &:last-child
+      margin-right 0
+
+    &_is_active
+      color $c-darkest
+      text-decoration none
+      opacity 1
+      border-bottom none
+
+      &:hover
+        color unset
+
+    +below('xs')
+      padding-bottom 0
+      line-height 30px
+
+.input-output-wrapper
+  align-items flex-end
+  +below(480px)
+    .column
+      width 100%
+      &:not(:last-child)
+        margin-bottom 15px
+
+.input-output-container
+  padding 32px 32px 40px 32px
+  position relative
+  +below('xs')
+    padding 20px
+  &:before
+    content ''
+    position absolute
+    border-top 1px solid $c-light-border
+    width calc(100% - 64px - 30px)
+    left 32px + 15px
+    top 0
+    +below('xs')
+      width calc(100% - 40px - 30px)
+      left 20px + 15px
+
+  &__content
+    +below('sm')
+      margin-bottom 30px
+  &__subtitle
+    font-size $fz-small
+    line-height 18px
+    color $c-lightgray
+    margin-bottom 48px
+  &__title
+    font-size $fz-xxl
+    margin-bottom 32px
+
+  .card
+    display flex
+    flex-direction column
+    justify-content center
+    height 100%
+
+    +below('xs')
+      padding 40px 20px
+      margin 0
+
+  .card__title
+  .terms
+    max-width 360px
+  .terms
+    margin-bottom 0
+    &__item
+      &:not(:last-child)
+        margin-bottom 24px
+        +below('xs')
+          margin-bottom 14px

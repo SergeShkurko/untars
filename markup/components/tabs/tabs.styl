@@ -1,0 +1,23 @@
+tabsItem()
+  display none
+  opacity 0
+  transition opacity
+  transition-timing-function ease
+  transition-duration .5s
+
+  &_is_active
+    display flex
+
+  &_is_show
+    animation fadeIn .3s ease forwards
+
+// .tabs
+
+//   &__item
+//     tabsItem()
+
+@keyframes fadeIn
+  0%
+    opacity 0
+  100%
+    opacity 1

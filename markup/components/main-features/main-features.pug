@@ -1,0 +1,28 @@
+mixin main-features(data)
+  +b.SECTION.section._size_small._theme_default
+    +b.container
+      +b.row.feature-wrapper
+        +b.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +b.feature
+            +e.icon#shield
+              include ../../static/img/svg/shield.svg
+            +e.title Надежно
+            +e.text Входим в консорциум #[br] Альфа-Групп
+        +b.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +b.feature
+            +e.icon
+              include ../../static/img/svg/chart.svg
+            +e.title Выгодно
+            +e.text Самые низкие спреды #[br] в отрасли
+        +b.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +b.feature
+            +e.icon#percent
+              include ../../static/img/svg/percent.svg
+            +e.title Без комиссий
+            +e.text Беслпатный ввод #[br] и вывод среств
+        +b.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +b.feature
+            +e.icon#available
+              include ../../static/img/svg/monitor.svg
+            +e.title Доступно
+            +e.text Все операции #[br] проходят онлайн

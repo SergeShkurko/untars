@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68px" height="68px" version="1.1" viewBox="0 0 68 68">
+    <defs>
+        <rect id="path-1" width="84" height="84" x="0" y="0"/>
+        <path id="path-3" d="M8,26 L20,26 L20,70 C20,73.3137085 17.3137085,76 14,76 L14,76 C10.6862915,76 8,73.3137085 8,70 L8,26 Z"/>
+    </defs>
+    <g fill="none" transform="translate(-8, -8)">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"/>
+            </mask>
+            <g id="Mask"/>
+            <path id="Rectangle-4" stroke="#6F86A2" stroke-width="2" d="M15.4259976,75 L70,75 C72.7614237,75 75,72.7614237 75,70 L75,10 C75,9.44771525 74.5522847,9 74,9 L20,9 C19.4477153,9 19,9.44771525 19,10 L19,66.6278583 L15.4259976,75 Z"/>
+            <path id="Path-9-Copy-2" stroke="#6F86A2" stroke-linecap="round" d="M63,46.5 L31,46.5"/>
+            <path id="Path-9-Copy-3" stroke="#6F86A2" stroke-linecap="round" d="M63,52.5 L31,52.5"/>
+            <path id="Path-9-Copy-4" stroke="#6F86A2" stroke-linecap="round" d="M47,58.5 L31,58.5"/>
+            <path id="Path-9-Copy-5" stroke="#6F86A2" stroke-linecap="round" d="M47,63.5 L31,63.5"/>
+            <rect id="Rectangle-24" width="33" height="18" x="30.5" y="19.5" stroke="#6E849E"/>
+            <polyline stroke="#F50032" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="40 33 44.3408637 28.9873044 48.6309682 28.9873044 54 24"/>
+        </g>
+        <g>
+            <use fill="#E0E4EB" fill-rule="evenodd" xlink:href="#path-3"/>
+            <path stroke="#6F86A2" stroke-width="2" d="M9,27 L9,70 C9,72.7614237 11.2385763,75 14,75 C16.7614237,75 19,72.7614237 19,70 L19,27 L9,27 Z"/>
+        </g>
+    </g>
+</svg>

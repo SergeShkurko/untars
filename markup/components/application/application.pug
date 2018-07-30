@@ -1,0 +1,23 @@
+mixin application(data)
+   +b.SECTION.section._theme_default._size_large
+      .container
+        +b.application.row
+          +e.content.column._md-6
+            +e.heading.heading.wow.fadeInUp Работайте с нами. #[br] Удобно. Легально. Надежно.
+            +e.text.text.wow.fadeInUp Информативный сайт и защищенный личный кабинет. #[br] Последняя версия торгового терминала, к которому вы привыкли.
+            +e.footer.wow.fadeInUp
+              +e.title Скачать MetaTrader 5
+              +e.bar
+                +e.A.icon._mode_apple(href="#" data-tooltip="" data-title="iOS")
+                  include ../../static/img/svg/apple.svg
+                +e.A.icon(href="#" data-tooltip="" data-title="Android")
+                  include ../../static/img/svg/google-play.svg
+                +e.A.icon(href="#" data-tooltip="" data-title="Linux")
+                  include ../../static/img/svg/linux.svg
+                +e.A.icon._mode_mac-os(href="#" data-tooltip="" data-title="Mac OS")
+                  include ../../static/img/svg/mac-os.svg
+                +e.A.icon(href="#" data-tooltip="" data-title="Windows")
+                  include ../../static/img/svg/windows.svg
+          +e.pictures.column._md-6
+            +e.IMG.picture._top.wow.slideInRight(data-wow-duration="0.7s" src="%=static=%img/assets/application/iphone_1.png", alt="iphone")
+            +e.IMG.picture._bottom.wow.slideInRight(data-wow-delay="0.2s" data-wow-duration="0.6s" data-wow-offset="5" src="%=static=%img/assets/application/iphone_2.png", alt="iphone")

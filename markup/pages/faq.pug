@@ -1,0 +1,119 @@
+extends _template.pug
+include ../components/breadcrumbs/breadcrumbs
+include ../components/faq/partials/form
+include ../components/banners/sidebar
+
+block body
+  +b.SECTION.section._theme_content._size_xsmall
+    .container
+      +breadcrumbs(['Главная', 'Вопрос - Ответ'])
+      +b.content-head
+        +b.H1.h1 Вопрос - Ответ
+      +b.content(data-component="faq")
+        +e.main
+          +b.faq-search
+            +b.content-search
+              +e.INPUT.input(type="text" placeholder="Поиск по вопросам")
+              +e.icon
+                include ../static/img/svg/search-icon.svg
+              +e.clear-button
+                include ../static/img/svg/cross.svg
+          +b.faq-categories._mobile
+            +e.arrow
+              include ../static/img/svg/chevron-red.svg
+            +e.header
+              +b.A.category-link(href="#money_io")
+                +e.icon
+                  include ../static/img/svg/ic-money-io.svg
+                +e.text Ввод и вывод средств
+            +e.body
+              +b.A.category-link(href="#internet_trade")
+                +e.icon
+                  include ../static/img/svg/ic-internet-trade.svg
+                +e.text Интернет-трейдинг
+              +b.A.category-link._active(href="#mobile_trade")
+                +e.icon
+                  include ../static/img/svg/ic-mobile-trade.svg
+                +e.text Мобильный трейдинг
+              +b.A.category-link(href="#money_io")
+                +e.icon
+                  include ../static/img/svg/ic-money-io.svg
+                +e.text Ввод и вывод средств
+              +b.A.category-link(href="#metatrader")
+                +e.icon
+                  include ../static/img/svg/ic-metatrader.svg
+                +e.text MetaTrader
+              +b.A.category-link(href="#fa")
+                +e.icon
+                  include ../static/img/svg/ic-fa.svg
+                +e.text Финансовый анализ
+              +b.A.category-link(href="#all")
+                +e.icon
+                  include ../static/img/svg/ic-all-questions.svg
+                +e.text Все
+          +b.faq-list
+            - var i = 0
+            while i < 6
+              +b.faq-block
+                +b.faq-head
+                  +e.category
+                    +b.category
+                      +e.icon
+                        include ../static/img/svg/ic-mobile-trade.svg
+                      +e.SPAN.text Мобильный трейдинг
+                  +e.title Как оплачивается комиссия на исполнение ордера?
+                  +e.text
+                +b.faq-body
+                  | Хоть в официальном правиле и говорится, что эти средства "резервируются", но так или иначе,
+                  | вы не можете ими воспользоваться.На некоторых сервисах они остаются на балансе и заморожены
+                  | навсегда, другие сервисы, например мы, просто не отображаютих на балансе dfsdfdddddddddddddddddddddddddddd dfasdfasfdasfsafas dsad dsad
+                +b.faq-toggle
+                  +e.text Читать полностью
+                  +e.icon
+                    include ../static/img/svg/chevron-small-gray.svg
+              - i++
+            +b.faq-block
+                +b.faq-head
+                  +e.category
+                    +b.category
+                      +e.icon
+                        include ../static/img/svg/ic-mobile-trade.svg
+                      +e.SPAN.text Мобильный трейдинг
+                  +e.title Как оплачивается комиссия на исполнение ордера?
+                  +e.text
+                +b.faq-body
+                  | Хоть в официальном правиле и говорится, что эти средства "резервируются", но так или иначе,
+                  | вы не можете ими воспользоваться.На некоторых
+                +b.faq-toggle
+                  +e.text Читать полностью
+                  +e.icon
+                    include ../static/img/svg/chevron-small-gray.svg
+        +e.sidebar
+          +b.faq-categories
+            +e.title По разделам
+            +b.A.category-link(href="#internet_trade")
+              +e.icon
+                include ../static/img/svg/ic-internet-trade.svg
+              +e.text Интернет-трейдинг
+            +b.A.category-link._active(href="#mobile_trade")
+              +e.icon
+                include ../static/img/svg/ic-mobile-trade.svg
+              +e.text Мобильный трейдинг
+            +b.A.category-link(href="#money_io")
+              +e.icon
+                include ../static/img/svg/ic-money-io.svg
+              +e.text Ввод и вывод средств
+            +b.A.category-link(href="#metatrader")
+              +e.icon
+                include ../static/img/svg/ic-metatrader.svg
+              +e.text MetaTrader
+            +b.A.category-link(href="#fa")
+              +e.icon
+                include ../static/img/svg/ic-fa.svg
+              +e.text Финансовый анализ
+            +b.A.category-link(href="#all")
+              +e.icon
+                include ../static/img/svg/ic-all-questions.svg
+              +e.text Все
+          +form()._small._expand_xs.faq-form
+          +sidebar-banner("%=static=%img/content/content_1.jpg", "#faq")

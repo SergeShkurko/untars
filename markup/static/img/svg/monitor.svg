@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="Available" width="84" height="67">
+    <g xmlns="http://www.w3.org/2000/svg" fill="none" fill-rule="evenodd">
+        <path stroke="#6F86A2" stroke-width="2" d="M80,1 L4,1 C2.34314575,1 1,2.34314575 1,4 L1,55 C1,56.6568542 2.34314575,58 4,58 L80,58 C81.6568542,58 83,56.6568542 83,55 L83,4 C83,2.34314575 81.6568542,1 80,1 Z" class="outerLine"/>
+        <path stroke="#6F86A2" stroke-width="2" d="M42,58 L42,66" class="leg" style="stroke-dashoffset: 1e-05;stroke-dasharray: none;transform: scaleY(-1) translateY(-185%);"/>
+        <path stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M51,66 L33,66" class="stand"/>
+        <path stroke="#6F86A2" stroke-linecap="round" d="M83,51.5 L0.990001,51.5" class="innerLine"/>
+        <rect width="72" height="40" x="6" y="6" fill="#E0E4EB" class="innerFill"/>
+        <polyline stroke="#E30000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="33 26.1153968 40.1236278 33.2608124 54.6328206 19" class="check"/>
+    </g>
+</svg>

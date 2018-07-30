@@ -1,0 +1,38 @@
+mixin mapSidebar()
+  +b.map-sidebar
+    +e.container.map-sidebar__header
+      +e.close
+        +e.close-icon
+          include ../../../static/img/svg/arrow.svg
+        +e.close-text Все офисы
+    +e.container.map-sidebar__content
+      +e.city Москва
+      +e.address ул. Большая Ордынка, 21 стр.2
+      +e.working-hours
+        +e.working-hours-title Открыто 09:00 – 21:00
+        +e.working-hours-dropdown
+          +e.working-hours-item #[span Понедельник] #[span 09:30 - 17:30]
+          +e.working-hours-item #[span Вторник] #[span 09:30 - 17:30]
+          +e.working-hours-item #[span Среда] #[span 09:30 - 17:30]
+          +e.working-hours-item #[span Четверг] #[span 09:30 - 17:30]
+          +e.working-hours-item #[span Пятница] #[span 09:30 - 17:30]
+          +e.working-hours-item #[span Суббота] #[span Выходной]
+          +e.working-hours-item #[span Воскреснье] #[span Выходной]
+      +e.phones
+        +e.phone
+          +e.phone-title Для юридических лиц
+          +e.phone-number 8 800 100-77-33
+        +e.phone
+          +e.phone-title Для юридических лиц
+          +e.phone-number 8 800 100-77-33
+        +e.phone
+          +e.phone-title Для юридических лиц
+          +e.phone-number 8 800 100-77-33
+        +e.phone
+          +e.phone-title Для юридических лиц
+          +e.phone-number 8 800 100-77-33
+      +e.metro-wrapper
+        +e.metro
+          +e.metro-color(style="background-color: #F56923")
+          +e.metro-name Третьяковская
+          +e.metro-distance 70м

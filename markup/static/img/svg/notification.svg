@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45px" height="60px" viewBox="0 0 45 60">
+    <g>
+        <path fill="none" stroke="#6F86A2" stroke-width="2" d="M35,55.8139535 L35,14.035067 C35,12.519131 35,12.519131 35,12.1447211 C35,11.4722586 35,11.4722586 35,4.18604651 C35,2.42053913 33.6169845,1 31.9245283,1 L4.0754717,1 C2.38301546,1 1,2.42053913 1,4.18604651 L1,55.8139535 C1,57.5794609 2.38301546,59 4.0754717,59 L31.9245283,59 C33.6169845,59 35,57.5794609 35,55.8139535 Z"/>
+        <path id="Path-10" fill="none" stroke="#6F86A2" stroke-width="1" d="M0,9.5 L36,9.5"/>
+        <path id="Path-10-Copy-3" fill="none" stroke="#6F86A2" stroke-width="1" d="M0,50.5 L36,50.5"/>
+        <path id="Combined-Shape" fill="#EDEFF3" fill-rule="evenodd" stroke="none" d="M34,14 L12,14 L12,39 L34,39 L34,50 L2,50 L2,10 L34,10 L34,14 Z"/>
+        <path id="Path-10-Copy" fill="none" stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M10.7351838,5.5 L14.2235559,5.5"/>
+        <path id="Path-10-Copy-2" fill="none" stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M18.4096024,5.5 L25.3863466,5.5"/>
+        <path id="Path-10-Copy-4" fill="none" stroke="#6F86A2" stroke-linecap="round" stroke-width="2" d="M15.3488372,54.5 L21.627907,54.5"/>
+    </g>
+    <g xmlns="http://www.w3.org/2000/svg" fill="#fff" transform="translate(10, 12)">
+        <path stroke="#6F86A2" stroke-width="2" d="M10.9349305,0 L27.9554633,0 C30.3002174,0 32.2010161,1.94228317 32.2010161,4.33821089 L32.2010161,20.8234123 C32.2010161,23.21934 30.3002174,25.1616232 27.9554633,25.1616232 L14.3696942,25.1616232 L14.3696942,27.7645497 L11.8223625,25.1616232 L4.18036742,25.1616232 C2.14662717,25.1616232 0.446878601,23.7004257 0.0317427449,21.7493988 C-0.00534097368,21.5751153 -0.00993217655,15.9877568 0.0179691363,4.98732316 L0.0179640998,4.98732315 C0.0249555542,2.23085678 2.26147781,5.06356287e-16 5.01795305,0 L10.9349305,0 Z"/>
+        <polyline stroke="#E30000" stroke-linecap="round" stroke-width="2" points="10 14.3059762 13.5014159 17.9027136 22.4248826 9" style="
+"/>
+    </g>
+</svg>

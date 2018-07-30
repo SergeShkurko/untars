@@ -1,0 +1,121 @@
+.feature-wrapper
+  display flex
+  margin initial
+
+  &_col
+    flex-direction column
+
+    +below('sm')
+      flex-direction row
+      justify-content space-between
+
+  &__row
+    display flex
+    justify-content space-between
+    height auto
+    margin initial
+    +at('md')
+      margin 0 -15px
+    +below('sm')
+      flex-direction column
+      width auto
+    +below('xs')
+      width 100%
+
+  &_for_horizontal
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+  svg
+    // visibility hidden
+  // +below('xs')
+  //   margin-bottom -40px
+
+.feature
+  display flex
+  flex-direction column
+  &__button
+    display flex
+    justify-content center
+    margin-top 20px
+    +below('xs')
+      margin-top 40px
+    button
+      padding 18px 31px
+  &_horizontal
+    flex-direction row
+    align-items center
+    justify-content flex-start
+    height 120px
+    margin-bottom 32px
+    width 28%
+    +below('md')
+      width 50%
+    +at('md')
+      padding 0 15px
+    +below('sm')
+      height 84px
+      width 100%
+  &_horizontal-sm
+    +below('sm')
+      flex-direction row
+      align-items center
+      justify-content flex-start
+      margin-bottom 32px
+      height 84px
+      width 100%
+  +below('sm')
+    margin-bottom 60px
+  +below('xs')
+    margin-bottom 32px
+  &__icon
+    display flex
+    justify-content center
+    align-items center
+    height 120px
+    flex-shrink 0
+    ~/_horizontal &
+      margin-right 25px
+      height 84px
+      width 78px
+    ~/_horizontal-sm &
+      +below('sm')
+        margin-right 25px
+        height 84px
+        width 78px
+    &_phone
+      padding-left 25px
+    &_office
+      padding-left 20px
+  &__title
+    margin-bottom 12px
+    font-weight 500
+    line-height 20px
+    text-align center
+    color $c-background_corporate
+    font-size 15px
+    ~/_horizontal &
+      font-size 15px
+      line-height 18px
+      text-align left
+      margin-bottom 0
+      +below('sm')
+        max-width 200px
+    ~/_horizontal-sm &
+      +below('sm')
+        font-size 15px
+        line-height 18px
+        text-align left
+        margin-bottom 0
+        max-width 200px
+    +below('xs')
+      font-size 15px
+      line-height 18px
+  &__text
+    font-size 15px
+    line-height 18px
+    text-align center
+    color $c-darkgray
+    +below('sm')
+      font-size $fz-small
+      line-height 15px

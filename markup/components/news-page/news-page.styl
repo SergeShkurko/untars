@@ -1,0 +1,668 @@
+.news-categories
+  display flex
+  flex-direction column
+  padding 40px 0 56px 40px
+  border 1px solid $c-light-border
+  margin-bottom 32px
+  position relative
+  width 352px
+
+  +below('sm')
+    width auto
+
+  &_mobile
+    display none
+
+  &__arrow
+    display block
+    position absolute
+    top 23px
+    right 34px
+    transform-origin 50%
+    transition .3s ease
+
+    svg
+      width 12px
+      height 7px
+
+    ~/_open &
+      transform rotate(180deg)
+
+  &__header
+    height 64px
+    display flex
+    align-items center
+
+    .time-link
+      padding-bottom 0
+      pointer-events none
+
+      &__text
+        color $c-background_corporate
+        border-bottom none
+        padding-bottom 0
+      g
+        stroke $c-background_corporate
+
+    .category-link
+      padding-bottom 0
+      pointer-events none
+
+      &__text
+        color $c-background_corporate
+        border-bottom none
+        padding-bottom 0
+      g
+        stroke $c-background_corporate
+
+  &__body
+    overflow hidden
+
+  &__title
+    color #172A3F
+    font-size $fz-double
+    font-weight 300
+    line-height 44px
+    margin-bottom 32px
+
+.datepicker-modal
+  display none
+  background-color #FFFFFF
+  box-shadow 0 2px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1)
+  padding 50px 44px 50px 44px
+  position absolute
+  top 41px
+  left 41px
+  z-index 5
+
+  +below('xs')
+    background-color #fdfdfd
+    box-shadow none
+    padding 0
+    left -10px
+    top -8px
+    right -10px
+
+  &__icon-mobile
+    display none
+    margin-right 0
+    width 20px
+    height 20px
+
+    svg
+      fill #b5bbc2
+
+    +below('xs')
+      display inline-block
+
+  &__text-mobile
+    display none
+    color rgba(33,42,51,0.4)
+    font-size $fz-medium
+    font-weight 500
+    line-height 20px
+    margin 0 7px 0 11px
+
+    &:nth-child(4)
+      margin-left 4px
+
+    +below('xs')
+      display inline-block
+
+  &__close
+    cursor pointer
+    top 18px
+    right 18px
+    position absolute
+
+    +below('xs')
+      top 10px
+      right 20px
+
+    @media only screen and (max-width: 345px)
+      right 3px
+
+  &_active
+    display block
+
+  &__inputs
+    background transparent
+    display flex
+    align-items center
+    justify-content space-between
+    margin-bottom 32px
+
+    +below('xs')
+      margin-bottom 0
+      justify-content flex-start
+      padding-left 10px
+      padding-bottom 9px
+      align-items center
+
+  &__date
+    position relative
+    margin-right 45px
+    margin-top 5px
+
+    +below('xs')
+      margin-right 0
+
+    &_begin
+      rect
+        x 7
+        y 10
+
+    &:last-child
+      margin-right 0
+
+    input
+      background transparent
+      border 0
+      border-bottom 1px solid #B5BBC2
+      color #546271
+      padding-bottom 11px
+      font-size 16px
+      font-weight 500
+      line-height 20px
+      letter-spacing 1px
+      outline none
+      padding-right 30px
+      width 249px
+
+      &:focus
+        border-color #e30000
+
+      +below('xs')
+        padding-right 0
+        padding-bottom 8px
+        padding-left 0
+        border-radius 0
+        width 90px
+
+    svg
+      position absolute
+      right 0
+      bottom 12px
+
+      +below('xs')
+        display none
+
+  .date-picker-wrapper
+    color inherit
+    font-family $font
+    font-size 16px
+    line-height 1
+    font-weight 400
+    background transparent
+    box-sizing border-box
+    border 0
+    padding 0
+    width 100%
+
+    +below('xs')
+      background-color #FFFFFF
+      box-shadow 0 2px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1)
+      padding 41px 0 35px 0
+      margin-top 3px
+
+    .arrow-prev
+      transform rotate(180deg)
+
+    .caption
+      height 20px
+
+      .next
+      .prev
+        padding 0
+
+    .month-wrapper
+      display flex
+      justify-content space-between
+      background-color transparent
+      border 0
+      padding 0
+      width 100% !important
+
+      tbody
+        tr
+          td
+            &:first-child
+              .day
+                border-radius 18px 0 0 18px
+                &.checked
+                  &.last-date-selected
+                    border-radius 18px
+                    background-color transparent !important
+
+                &__digit
+                  border-radius 18px 0 0 18px
+            &:last-child
+              .day
+                border-radius 0 18px 18px 0
+
+                &__digit
+                  border-radius 0 18px 18px 0
+
+      .day
+        color #546271!important
+        font-size 14px
+        line-height 16px
+        text-align center
+        padding 0 3px
+        margin 2px -1px
+
+        +below('xs')
+          margin-left -1px
+          margin-right -1px
+
+        &__digit
+          position relative
+          z-index 10
+          height 28px
+          display flex
+          width 28px
+          justify-content center
+          margin 0 auto
+          align-items center
+
+        &.checked
+
+          &.lastDayInMonth
+            border-radius 0 18px 18px 0
+            position relative
+
+            & .day__digit
+              border-radius 0 18px 18px 0
+
+          &.firstDayInMonth
+            border-radius 18px 0 0 18px
+            position relative
+
+            & .day__digit
+              border-radius 18px 0 0 18px
+
+          &.first-date-selected
+            border-radius 18px 0 0 18px
+            position relative
+            padding-left 0
+            margin-left 6px
+
+            &.lastDayInMonth
+              background-color transparent !important
+
+            &.last-date-selected
+              background-color transparent !important
+
+            & .day__digit
+              background-color #F92A2A !important
+              box-shadow 0 4px 8px 0 rgba(108,0,0,0.32)
+              border-radius 50%
+              margin-left 0
+
+          &.last-date-selected
+            border-radius 0 18px 18px 0
+            position relative
+            padding-right 0
+            margin-right 6px
+
+            & .day__digit
+              background-color #F92A2A !important
+              box-shadow 0 4px 8px 0 rgba(108,0,0,0.32)
+              border-radius 50%
+              margin-right 0
+
+        &.real-today
+          background-color transparent
+
+          & .day__digit
+            background-color #F3F4F5
+            border-radius 50%
+
+        &.checked
+        &.hovering
+          background-color #E30000!important
+          box-shadow none
+          color #fff !important
+
+          & .day__digit
+            background-color #E30000!important
+
+      .month-name
+        color rgba(33,42,51,0.4)
+        font-size $fz-large
+        line-height 16px
+        text-transform none
+
+      .month-element
+        font-weight 400
+
+      .week-name
+        color rgba(127,127,127,1)
+        font-size 14px
+        line-height 16px
+
+        th
+          font-weight 400
+          padding 27px 0 21px
+          text-transform none
+
+          &:nth-child(6)
+          &:nth-child(7)
+            color #C12F32
+
+      table
+        float none
+        width 249px
+
+        +below('xs')
+          margin 0 auto
+
+.news-filter
+  display flex
+  flex-direction row
+  margin-bottom 41px
+  position relative
+
+  +below('xs')
+    flex-direction column
+    margin-bottom 24px
+
+  &__datepicker
+    +below('xs')
+      position relative
+
+  .category-link
+    margin-right 20px
+    margin-bottom 0
+
+  .time-link
+    margin-right 20px
+    margin-bottom 0
+
+    +below('md')
+      margin-right 15px
+
+    +below('sm')
+      margin-right 20px
+
+    +below('xs')
+      margin 0
+
+
+.datepicker-button
+  cursor pointer
+  display flex
+  margin-left 20px
+
+  +below('xs')
+    margin-left 0
+
+  &__icon
+    display inline-block
+    width 20px
+    height 20px
+    margin-right 12px
+    margin-top -3px
+
+    ^[0]_select &
+      svg
+        fill #212a33
+
+    ^[0]_active &
+      svg
+        fill #e30000
+
+    ^[0]:hover &
+      svg
+        +below('xs')
+          fill #b5bbc2
+
+    svg
+      fill #b5bbc2
+
+  &__text
+    color #B5BBC2
+    font-size 14px
+    font-weight 500
+    letter-spacing 0.4px
+    line-height 20px
+
+    ^[0]_select &
+      color #212a33
+
+    ^[0]_active &
+      color #E30000
+
+    ^[0]:hover &
+      color #E30000
+
+.news-list
+  min-height 500px
+
+.news-block
+  display flex
+  cursor pointer
+  padding-bottom 32px
+  border-bottom 1px solid $c-light-border
+
+  +below('md')
+    flex-direction column
+
+  +below('sm')
+    flex-direction row
+
+  +below('xs')
+    flex-direction column
+
+   &__content
+    width 100%
+
+  &__image
+    width 256px
+    min-width 256px
+    height 192px
+    max-width 256px
+    margin-right 33px
+
+    +below('md')
+      margin-bottom 15px
+
+    +below('sm')
+      margin-bottom 0
+
+    +below('xs')
+      margin-bottom 15px
+      max-height none
+      max-width 100%
+      width 100%
+
+    img
+      height 100%
+      width 100%
+
+  &_cursor-pointer
+      cursor pointer
+
+  &:not(:last-child)
+    margin-bottom 32px
+
+  &:last-child
+    border-bottom 0
+    padding-bottom 80px
+
+  &:hover
+    .news-bottom__arrow
+      svg g
+        fill $c-red
+
+.news-head
+  padding-bottom 20px
+
+  &__category
+    margin-bottom 13px
+
+  &__title
+    color #273142
+    font-size $fz-large
+    line-height 24px
+    margin-bottom 20px
+
+  &__text
+    color $c-darkgray
+    font-size $fz-medium
+    line-height 24px
+    overflow hidden
+
+.news-bottom
+  display flex
+  align-items center
+  justify-content space-between
+
+  &__date
+    color #B5BBC2
+    font-size $fz-small
+    line-height 18px
+
+.news-pagination
+  display flex
+  align-items center
+
+  &__item
+    color #B5BBC2
+    font-size $fz-medium
+    line-height 16px
+    margin 0 8px
+
+    &:hover
+      color #6D7986
+
+    &_active
+      color #6D7986
+
+  &__btn
+    display flex
+    justify-content center
+    align-items center
+    border-radius 50%
+    border 1px solid #B5BBC2
+    height 41px
+    width 41px
+
+    svg
+      fill #B5BBC2
+
+    &:hover
+      background $c-red
+      border 1px solid $c-red
+      svg
+        fill #fff
+
+    &_prev
+      margin-right 12px
+
+      svg
+        transform rotate(180deg)
+
+    &_next
+      margin-left 12px
+
+.time-link
+  display flex
+
+  // &:not(:last-child)
+  //   margin-bottom 22px
+
+  &_active
+    // align-items center
+    // padding-bottom 6px
+
+  &__icon
+    display inline-block
+    width 20px
+    height 20px
+    margin-right 21px
+
+    svg
+      display block
+      // transition .5s
+
+      g
+        transition .3s ease
+        stroke #6D7986
+        // opacity 0.8
+      g#AF-list
+        g
+          stroke none
+
+    ~/_active &
+
+      g
+        stroke $c-background_corporate
+      g#AF-list
+        fill #212a33
+        g
+          stroke none
+
+    ~/:hover &
+      g
+        // opacity 1
+        stroke $c-background_corporate
+      g#AF-list
+        fill #212a33
+        g
+          stroke none
+
+  &__text
+    color #A0A8B0
+    font-size 18px
+    line-height 16px
+    transition .3s ease
+    padding-bottom 8px
+    // border-bottom 1px solid rgba(82,90,104, 0.16)
+    border-bottom 1px solid #E1E2E5
+
+    ~/_active &
+      color $c-background_corporate
+      border-color transparent !important
+      // padding-bottom 0
+
+    ~/:hover &
+      color $c-background_corporate
+      border-color $c-background_corporate
+
+    +below('xs')
+      font-size 16px
+
+.time-link-wrapper
+  display flex
+
+  +below('xs')
+    justify-content space-between
+    margin-bottom 24px
+    width 100%
+
++below('sm')
+  .news-categories
+    padding 0
+    display none
+
+    &_mobile
+      display flex
+
+    &__header
+    &__body
+      padding-left 24px
+
+    &__body
+      ~/_mobile &
+        height 0
+      .category-link
+        &:last-child
+          margin-bottom 22px
+
++above(480px)
+  .news-categories
+    &_mobile
+      max-width 430px
+      margin-left auto
+      margin-right auto

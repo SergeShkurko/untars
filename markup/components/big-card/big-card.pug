@@ -1,0 +1,14 @@
+mixin big-card(data)
+  +b.big-card
+    +e.content
+      +e.subtitle Вложив 6 000 000 ₽ в январе 2015 вы могли заработать
+      +e.title._is_marked 1 000 000 ₽
+      +e.buttons
+        +b.BUTTON.button._theme_white._has_no_icon._theme_on_red._is_bold
+          +e.content
+            +e.text Открыть счет
+        +e.A.link(href="#") Как стать клиентом?
+      +e.tip Купив доллары по курсу 72 и реализовав прибыль на уровне 82  в течение 4-х недель.
+    +e.media
+      +e.img-wrap
+        +e.IMG.img(src="%=static=%img/content/trader.png")

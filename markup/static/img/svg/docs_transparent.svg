@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="58px" viewBox="0 0 44 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 46</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="3_internet/mob/meta_trading" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-46" transform="translate(-11.000000, -4.000000)">
+            <rect id="Rectangle-7-Copy-8" x="0" y="0" width="66" height="66"></rect>
+            <g id="Group-25" transform="translate(11.000000, 4.000000)">
+                <path d="M1,11 L1,57 L36,57 L36,16.4142136 L30.5857864,11 L1,11 Z" id="Rectangle-11" stroke="#FFFFFF" stroke-width="2"></path>
+                <path d="M1,11 L1,57 L36,57 L36,43 L43,43 L43,1 L13,1 L13,11 L1,11 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                <polyline id="Path-21" stroke="#F50032" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="10.993305 39.045961 15.0381065 35.0246821 19.0356107 35.0246821 24.0384557 30.0267097"></polyline>
+                <polyline id="Path-19" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round" points="30.0443834 11.0218239 30.0443834 17.06205 36.0589304 17.06205"></polyline>
+                <polyline id="Path-20" stroke="#FFFFFF" stroke-linejoin="round" points="7.5 27 7.5 42.5 27 42.5"></polyline>
+                <path d="M7,49.5 L13,49.5" id="Path-22" stroke="#FFFFFF"></path>
+                <path d="M16,49.5 L27,49.5" id="Path-22-Copy" stroke="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

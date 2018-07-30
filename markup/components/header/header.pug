@@ -1,0 +1,51 @@
+include ./partials/links-bar/links-bar
+include ./partials/navbar/navbar
+include ../logo/logo
+include ./partials/controls/controls
+include ./partials/collapsed/collapsed
+
+mixin header(data)
+  +b.HEADER.page-header
+    +e.mobile-callback
+      .container
+        +b.NAV.linksbar
+          +e.link Получить консультацию
+          +e.link 8 800 800 900
+    +e.linksbar.__invisible-on-show
+      .container
+        +linksbar()
+    +e.central
+      +e.central-content.container
+        +e.col
+          +e.controls
+            +controls()
+          +e.logo
+            +logo('/')
+          form(action="/search/")
+            +e.INPUT.searchbar.__shown-on-show.hidden-sm.input.searchbar(type="search" placeholder="Что будем искать?" style="display: none")
+        +e.col.__hidden-on-show.hidden-sm
+          +b.linksbar._vertical-normal
+            +e.col
+              +e.A.link( href='#' ) Вход в MT-Web
+              +e.A.link( href='#' ) Онлайн чат
+        +e.col._is_right.__hidden-on-show.hidden-sm
+          +e.content
+            +b.header-content
+              +e.text +7 (499) 215-79-79
+              +e.title с 9:00 до 18:00 мск
+          +e.button
+            +b.BUTTON.button._white
+              +e.content
+                +e.icon
+                  include ../../static/img/svg/enter.svg
+                +e.text Личный кабинет
+          +e.button
+            +b.BUTTON.button._has_no_icon
+              +e.content
+                +e.text Открыть счет
+    +e.footer.__invisible-on-show
+      .container
+        +navbar().page-header__navbar
+    +e.collapsed.__shown-on-show(style="display: none")
+      +collapsed()
+

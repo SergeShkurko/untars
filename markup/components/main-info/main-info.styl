@@ -1,0 +1,81 @@
+.main-info
+  +above('md')
+    padding-top 32px
+  +above('lg')
+    padding-top 60px
+  +below('sm')
+    margin-top 40px
+  &__text
+    margin-bottom 42px
+
+    &_small
+      width 45%
+
+      +below('sm')
+        width 100%
+
+.links
+  display flex
+  flex-wrap wrap
+  border-width 1px 0 0 1px
+  border-style solid
+  border-color $c-icon-fill
+  +below('sm')
+    margin-bottom 40px
+  &__item
+    height 184px
+    padding 32px
+    border-width 0 1px 1px 0
+    border-style inherit
+    border-color inherit
+    $transition(all)
+    position relative
+    +below('xs')
+      height 175px
+      padding 24px
+      justify-content center
+    &:hover
+      $shadow()
+      border-color #fff
+      &:before
+        content ''
+        width 100%
+        height 100%
+        position absolute
+        top -1px
+        left -1px
+        border-width 1px 0 0 1px
+        border-style solid
+        border-color #fff
+  &__icon
+    height 66px
+    margin-bottom 12px
+  &__title
+    font-weight 500
+    line-height 22px
+    color $c-darkest
+    max-width 160px
+    $transition(color)
+    +below('xs')
+      word-wrap break-word
+      font-size $fz-small
+      line-height 15px
+    +below(360px)
+      font-size 12px
+      line-height 14px
+    ^[0]__item:hover &
+      color $c-red
+
+.main-form
+  +below('xs')
+    padding 0
+
+.main-info-banner
+  padding-top 32px
+  height 100%
+  width 100%
+
+  +above('lg')
+    width 575px
+    height 582px
+

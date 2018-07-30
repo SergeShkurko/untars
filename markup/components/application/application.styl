@@ -1,0 +1,102 @@
+.application
+  +below('sm')
+    padding-bottom 430px
+  +below(600px)
+    padding-bottom 215px
+  &__content
+    z-index 1
+    +above('md')
+      margin-top 55px
+  &__text
+    margin-bottom 48px
+    color rgba($c-darkest, 50%)
+  &__title
+    font-size 15px
+    line-height 18px
+    font-weight 500
+    margin-bottom 20px
+  &__bar
+    display inline-flex
+    position relative
+    align-items center
+    max-width 280px
+    box-shadow 0 2px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1)
+    +below('xs')
+      .tooltip
+        display none
+  &__icon
+    width 56px
+    height 56px
+    background #fff
+    display flex
+    align-items center
+    justify-content center
+    cursor pointer
+    &:not(:last-child)
+      border-right 1px solid rgba($c-icon-fill, 40%)
+    &_mode_apple
+      padding-bottom 3px
+    &_mode_mac-os
+      svg
+        opacity 0.8
+    svg
+      fill none
+      .fill
+        $transition(fill)
+        fill rgba($c-icon-line, 90%)
+    &:hover
+      background-color $c-background_default
+      svg
+        .fill
+          fill $c-red
+  &__pictures
+    position absolute
+    height calc(100% - 70px);
+    overflow hidden
+    top 0
+    right 0
+    top 115px
+    z-index 0
+    +below('md')
+      top 80px
+      height calc(100% - 30px);
+    +below('sm')
+      left 0
+      margin auto
+    +at('sm')
+      max-width: 90%;
+    +below(600px)
+      height calc(100% - 25px);
+  &__picture
+    position absolute
+    max-width 70%
+    +below('lg')
+      max-width 60%
+    +below('md')
+      max-width 80%
+    +below('sm')
+      max-height 275px
+      max-width 70%
+    +below(600px)
+      max-height 165px
+    &_top
+      bottom calc(100% - 306px)
+      left 15px
+      +below('md')
+        left 0
+        bottom calc(100% - 320px)
+      +below('sm')
+        top initial
+        bottom 200px
+        margin auto
+      +below(600px)
+        bottom 110px
+    &_bottom
+      left 270px
+      bottom 0
+      +below(1734px)
+        left initial
+        right 0
+      // +below(600px)
+      //   left 25%
+

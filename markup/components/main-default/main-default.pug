@@ -1,0 +1,39 @@
+include ../breadcrumbs/breadcrumbs
+//- Example of default leayout head section on page
+mixin main-default(data)
+  +b.main-screen
+    +e.background
+      +e.IMG.img._on_desktop(src="%=static=%img/assets/main/slide_3.jpg", alt="slide")
+      +e.IMG.img._on_tablet(src="%=static=%img/assets/main/slide_3.jpg", alt="slide")
+      +e.IMG.img._on_mobile(src="%=static=%img/assets/main/slide_3.jpg", alt="slide")
+    +e.overlay
+    +e.container.container
+      +e.breadcrumbs
+        +breadcrumbs(['Главная', 'Интернет-трейдинг'])._theme_light
+      +e.content
+        +b.main-content
+          +e.title Интернет-трейдинг на рынке Форекс
+          +e.text Начните зарабатывать на колебаниях курсов валют, получая стабильный доход
+      +e.footer.swiper-container
+        +e.footer-items-wrapper.swiper-wrapper
+          +e.footer-item.swiper-slide
+            +e.footer-item-content
+              +e.icon
+                include ../static/img/svg/cheap-icon.svg
+              +e.description Доходность выше любых ожиданий
+          +e.footer-item.swiper-slide
+            +e.footer-item-content
+              +e.icon
+                include ../static/img/svg/cheap-icon.svg
+              +e.description Доступ к высокой ликвидности 24/5
+          +e.footer-item.swiper-slide
+            +e.footer-item-content
+              +e.icon
+                include ../static/img/svg/cheap-icon.svg
+              +e.description Низкий порог входа
+          +e.footer-item.swiper-slide
+            +e.footer-item-content
+              +e.icon
+                include ../static/img/svg/cheap-icon.svg
+              +e.description В любой точке мира, где есть интернет
+      .main-slider__bullets

@@ -1,0 +1,63 @@
+.page-footer
+  background #fff
+  position relative
+  border-top 1px solid $c-background_default
+  &__bottom
+    padding-top 20px
+    +below('xs')
+      padding-top 10px
+  &__center
+    border-top 1px solid $c-background_default
+  &__navbar
+    padding 30px 0
+  &__top
+    display flex
+    justify-content space-between
+    padding-top 40px
+    padding-bottom 40px
+    +below('xs')
+      flex-direction column
+      align-items flex-start
+  &__col
+    display flex
+    align-items center
+    +below('xs')
+      flex-direction column
+      align-items initial
+      width 100%
+  &__logo
+    width 192px
+    height 50px
+    flex-shrink 0
+    +below('xs')
+      margin-bottom 24px
+  &__content
+    +above('sm')
+      margin-right 95px
+      margin-left auto
+      padding-top 2px
+    +below('xs')
+      margin-bottom 24px
+  &__button
+    +below('xs')
+      width 100%
+      max-width 360px
+      button
+        width 100%
+  & &__linksbar
+    +below('xs')
+      flex-direction column
+      align-items flex-start
+      .linksbar__col
+        flex-direction column
+      .linksbar__link
+        margin-bottom 20px
+        display block
+  &__policy
+    font-size $fz-small
+    line-height 1.225
+    color $c-lightgray
+    margin-top 24px
+    margin-bottom 60px
+    +below('xs')
+      margin-top 20px

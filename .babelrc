@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "@babel/env"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": false }]
+  ],
+  "ignore": [
+    "**/babel_ignore_*.js"
+  ]
+}

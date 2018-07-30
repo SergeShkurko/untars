@@ -1,0 +1,46 @@
+extends _template.pug
+include ../components/breadcrumbs/breadcrumbs
+include ../components/ordered-list/ordered-list
+
+block body
+  +b.SECTION.section._theme_content._size_xsmall
+    .container
+      +breadcrumbs(['Главная', 'Ввод и вывод средств'])
+      +b.content-head
+        +b.H1.h1 Ввод и вывод средств
+
+      include ../components/input-output/input-output
+
+  +b.SECTION.section._theme_content._size_xsmall._has_no-offset-top
+    .container
+      +b.content-head
+        +b.heading.requsites-heading Банковские реквизиты
+        +b.A.download-link(href="#")
+          +e.icon
+            include ../static/img/svg/download.svg
+          +e.text Скачать реквизиты
+
+      +b.row
+        +b.column._md-6
+          +b.requisites
+            - var blocks = [[{name:'Получатель:', value: ' Alfa Capital Holdings (Cyprus) Ltd.'},{name:'КИО:', value: '9909066654'},{name:'КПП:', value: '770801001'},{name:'Р/с:', value: '40807810501600000184'},{name:'Телефон:', value: '54654654645'},{name:'К/с:', value: '30101810200000000593 в АО «АЛЬФА-БАНК», г. Москва'}, {name:'ИНН:', value: '40807978901600000118'},{name:'КПП:', value: '30101810400000000555'}], [{name:'Beneficiary:', value: 'Alfa Capital Holdings (Cyprus) Ltd.'},{name:'Beneficiary Bank:', value: 'Bank of Cyprus Public Company Limited, Nicosia, Cyprus'},{name:'SWIFT:', value: 'BCYPCY2N'},{name:'IBAN:', value: 'CY64002001950000357021210167'},{name:'Correspondent Bank:', value: 'AO RAIFFEISENBANK, MOSCOW'}, {name:'SWIFT:', value: 'RZBMRUMM'}, {name:' BIC:', value: '044525700'},{name:'Correspondent account: ', value: '30111810400000110378'}]]
+            - var data1 = [{name:'Получатель:', value: ' Alfa Capital Holdings (Cyprus) Ltd.'},{name:'КИО:', value: '9909066654'},{name:'КПП:', value: '770801001'},{name:'Р/с:', value: '40807810501600000184'},{name:'Телефон:', value: '54654654645'},{name:'К/с:', value: '30101810200000000593 в АО «АЛЬФА-БАНК», г. Москва'}, {name:'ИНН:', value: '40807978901600000118'},{name:'КПП:', value: '30101810400000000555'}]
+            - var data2 = [{name:'Beneficiary:', value: 'Alfa Capital Holdings (Cyprus) Ltd.'},{name:'Beneficiary Bank:', value: 'Bank of Cyprus Public Company Limited, Nicosia, Cyprus'},{name:'SWIFT:', value: 'BCYPCY2N'},{name:'IBAN:', value: 'CY64002001950000357021210167'},{name:'Correspondent Bank:', value: 'AO RAIFFEISENBANK, MOSCOW'}, {name:'SWIFT:', value: 'RZBMRUMM'}, {name:' BIC:', value: '044525700'},{name:'Correspondent account: ', value: '30111810400000110378'}]
+            each block in blocks
+              +b.requisites-block._offset_sm
+                each row in block
+                  +e.row
+                    span= row.name
+                    span= row.value
+
+          .requsites-tip Счет в рублях
+
+        +b.column._md-1
+
+        +b.column._md-5
+          +b.card
+            +e.title.heading._size_small В назначении платежа необходимо указать:
+            +e.subheading Если Вы делаете перевод со своего счета в Альфа-Банке
+            +e.text.text Ввод ДС в ООО «Альфа-Форекс». #[br] Фамилия Имя Отчество. #[br] №спец. раздела $$999XXXXXXXXXXXXXXXXX$$ #[br] Где №спец. раздела - Ваш уникальный номер в ООО «Альфа-Форекс»
+            +e.subheading Если Вы делаете перевод из другого банка
+            +e.text.text "Перевод средств в ООО «Альфа-Форекс». Фамилия Имя Отчество. #[br] Счет №XXXXXXXXXXXXXXXXXXXX, #[br] спецраздел № $$999XXXXXXXXXXXXXXXXX$$" #[br] Где счет - это номер Вашего банковского счета #[br] №спец. раздела - Ваш уникальный номер в ООО «Альфа-Форекс»

@@ -1,0 +1,94 @@
+multiLineEllipsis($lineHeight = 1.2em, $lineCount = 1, $bgColor = white)
+  overflow hidden
+  position relative
+  line-height $lineHeight
+  max-height ($lineHeight * $lineCount)
+  margin-right -1em
+  padding-right 1em
+  &:before
+    content '...'
+    position absolute
+    right 15px
+    bottom 0
+  &:after
+    content ''
+    position absolute
+    right 0
+    width 1em
+    height 1em
+    margin-top 0.2em
+    background $bgColor
+
+.news
+  $shadow()
+  $transition(transform)
+  padding 24px
+  flex-grow 1
+  display flex
+  flex-direction column
+  justify-content space-between
+  &:hover
+    +above('sm')
+      transform translateY(-10px)
+  &__header
+    display flex
+    align-items center
+    margin-bottom 23px
+  &__icon
+    margin-right 8px
+    svg
+      $transition(fill)
+      fill $c-gray
+      ^[0]:hover &
+        fill $c-red
+  &__tag
+    font-size $fz-small
+    line-height 16px
+    font-weight 500
+    color $c-gray
+    $transition(color)
+    ^[0]:hover &
+      color $c-red
+  &__title
+    line-height 24px
+    margin-bottom 23px
+    color $c-darker
+    $transition(color)
+    multiLineEllipsis(24px, 4)
+    ^[0]:hover &
+      color $c-darkest
+  &__footer
+    display flex
+    align-items center
+    justify-content space-between
+  &__date
+    font-size $fz-small
+    line-height 18px
+    color $c-lightgray
+  &__link
+    svg
+      $transition(fill)
+      fill $c-gray
+      ^[0]:hover &
+        fill $c-red
+
+.news-wrapper
+  +below('sm')
+    flex-wrap nowrap
+    overflow auto
+    $scrollbar()
+    margin-left 0
+    margin-right 0
+    padding 10px 0
+  &__item
+    +below('sm')
+      flex-shrink 0
+      padding 9px
+      min-width 240px
+
+.news-link
+  vertical-align middle
+  margin-left 30px
+  font-weight 500
+  +below('xs')
+    margin-left 22px

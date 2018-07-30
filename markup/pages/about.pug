@@ -1,0 +1,165 @@
+extends _template.pug
+include ../components/breadcrumbs/breadcrumbs
+include ../components/card/card
+include ../components/default-block/default-block
+include ../components/banners/splitted
+include ../components/news/news
+
+block body
+  section
+    +b.main-screen.about
+      +e.background
+        +e.IMG.img._on_desktop(src="%=static=%img/content/about.jpg", alt="about-company")
+        +e.IMG.img._on_tablet(src="%=static=%img/content/about_tablet.jpg", alt="about-company")
+        +e.IMG.img._on_mobile(src="%=static=%img/content/about_mobile.jpg", alt="about-company")
+      +e.overlay
+      +e.container.container
+        +e.breadcrumbs
+          +breadcrumbs(['Главная', 'О компании'])._theme_light
+        +e.content
+          +b.main-content
+            +e.title О компании
+            +e.text Мы создаем лучший сервис, предлагая большой выбор #[br] инструментов для инвестирования и возможность #[br] управления средствами . Высокая надежность на уровне #[br] европейского банка c рейтингом «ААА».  Откройте для себя #[br] безграничные возможности интернет-трейдинга с надежным #[br] брокером европейского уровня.
+        .main-slider__bullets
+
+  +b.SECTION.section._size_small._padding_bottom_small.about
+    .container
+      .row.offset-wrapper
+        +b.column._lg-7.wow.fadeInUp
+          +b.default-block.mobile-trading-features
+            +e.heading.heading.wow.fadeInUp Альфа-Форекс входит в состав консорциума Альфа-Групп
+            +e.text.text.wow.fadeInUp Альфа-Форекс — компания и бренд, входящая в состав Альфа-Групп, предлагает вам надежные услуги интернет-трейдинга на международном валютном рынке через Alfa Сapital Holdings (Cyprus) Limited. Она является одной из крупнейших инвестиционных компаний республики Кипр, которая регулируется Центральным банком и Комиссией по ценным бумагам республики Кипр. Alfa Сapital Holdings оказывает инвестиционные услуги с 1996 года в республике Кипр и за ее пределами. В 2005 году Alfa Сapital Holdings вышла на международный уровень инвестиционных услуг и трейдинга, открыв филиал Alfa Capital Markets в Лондоне.
+        +b.column._lg-5.wow.fadeInUp
+          +b.card
+            +e.title.heading Альфа-Групп (Альфа) — одна из крупнейших инвестиционных групп в России основанная в 1989 году.
+            +e.text.text Независимые друг от друга бизнесы группы осуществляют деятельность на территории стран всего мира, твердо следуя принципам финансового контроля и корпоративного развития.
+
+  +b.SECTION.section._theme_default
+    +b.container
+      +b.heading._center._for_element._left.wow.fadeInUp Консорциум Альфа-Групп сегодня
+      +b.consortium.row
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.icon
+            include ../static/img/svg/office.svg
+          +e.title Рейтинг «Эксперт РА»: А++
+          +e.text Исключительно высокий уровень надежности
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.icon
+            include ../static/img/svg/pc.svg
+          +e.title FitchRatings: AA-(rus)
+          +e.text Исключительно высокий уровень надежности
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.icon
+            include ../static/img/svg/safe.svg
+          +e.title FitchRatings
+          +e.text Исключительно высокий уровень надежности
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.icon
+            include ../static/img/svg/trade-start.svg
+          +e.title 20 лет
+          +e.text Исключительно высокий уровень надежности
+
+  +b.SECTION.company-consorc.section
+    +e.background
+      +e.IMG.img._on_desktop(src="%=static=%img/content/background-consorcium.jpg", alt="companys")
+    +e.container.container
+      +e.heading.heading.white Компании консорциума Альфа-Групп
+      +e.row.row
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-alpha-bank.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-alpha-capital.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-alfa-forex.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-alpha-strahovanie.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-karusel.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-perekrestok.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-peterka.png", alt="logo")
+        +e.item.column._xs-6._sm-3._md-3._lg-3.wow.fadeInUp
+          +e.IMG.company-logo(src="%=static=%img/content/logo-rosvodokanal.png", alt="logo")
+
+  +b.SECTION.section
+    +b.why-alfaforex.container
+      +b.default-block
+        +e.heading.heading.wow.fadeInUp Почему выбирают Альфа-Форекс?
+        .row
+          +e.column.column._xs-12._sm-12._md-6._lg-6.wow.fadeInUp
+            +e.text.text.wow.fadeInUp Инвесторы и трейдеры выбирают Альфа-Форекс, потому что это — многообразие выгодных и комфортных условий в сочетании с высокой надежностью, которые гарантируют плодотворное сотрудничество. На протяжении нескольких лет мы держим марку лучшего банковского брокера, предлагая настоящее банковское котирование, большие объемы торгов, высококачественный дилинг, а также интеграцию с другими продуктами Альфа-Групп.
+          +e.column.column._xs-12._sm-12._md-6._lg-6.wow.fadeInUp
+            +e.text.text.wow.fadeInUp Мы предоставляем высокую надежность европейского регулятора, широкую линейку торговых инструментов, удобные торговые платформы и их мобильные версии, приложение для управления инвестициями и привилегированное обслуживание, включающее пакет услуг "Максимум" от Альфа-Банка в сочетании с персональной аналитикой.
+      +e.benefits
+        +e.item
+          +e.icon
+            include ../static/img/svg/office.svg
+          +e.title Надежно
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+        +e.item
+          +e.icon
+            include ../static/img/svg/pc.svg
+          +e.title Защищено
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+        +e.item
+          +e.icon
+            include ../static/img/svg/pc.svg
+          +e.title Без комиссий
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+        +e.item
+          +e.icon
+            include ../static/img/svg/office.svg
+          +e.title Доступно
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+        +e.item
+          +e.icon
+            include ../static/img/svg/pc.svg
+          +e.title Брокер проверенный временем
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+        +e.item
+          +e.icon
+            include ../static/img/svg/pc.svg
+          +e.title Выгодные торговые условия
+          +e.text Нам можно доверять большие депозиты. Репутация крупнейшей инвестиционной группы Европы "Альфа-Групп" и партнерство с одним из известнейших банков в России
+
+  +b.SECTION.section._theme_default
+    +b.container
+      +b.heading._center._for_element.wow.fadeInUp Награды и премии
+      +b.awards
+        +e.item
+          +e.year
+            include ../static/img/svg/leaf-left.svg
+            +e.SPAN.value 2015
+            include ../static/img/svg/leaf-right.svg
+          +e.title Лучший Банковский брокер
+        +e.item
+          +e.year
+            include ../static/img/svg/leaf-left.svg
+            +e.SPAN.value 2015
+            include ../static/img/svg/leaf-right.svg
+          +e.title Лучший CFD-брокер
+        +e.item
+          +e.year
+            include ../static/img/svg/leaf-left.svg
+            +e.SPAN.value 2014
+            include ../static/img/svg/leaf-right.svg
+          +e.title Лучший Банковский брокер
+        +e.item
+          +e.year
+            include ../static/img/svg/leaf-left.svg
+            +e.SPAN.value 2014
+            include ../static/img/svg/leaf-right.svg
+          +e.title Лучший Брокер Восточной Европы
+        +e.item
+          +e.year
+            include ../static/img/svg/leaf-left.svg
+            +e.SPAN.value 2013
+            include ../static/img/svg/leaf-right.svg
+          +e.title Лучший Брокер Восточной Европы
+  +news()

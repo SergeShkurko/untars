@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78px" height="61px" version="1.1" viewBox="0 0 78 61">
+    <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" transform="translate(-3, -11)">
+        <g id="metatrader-icon-copy" transform="">
+            <g id="Group-5" mask="">
+                <g transform="translate(3.000000, 11.000000)">
+                    <polygon id="Rectangle-15" fill="#EDEFF3" fill-rule="evenodd" stroke="none" points="0 36 78 36 78 61 0 61"/>
+                    <rect id="Rectangle-4" width="76" height="59" x="1" y="1" fill="none" stroke="#6F86A2" stroke-width="2" rx="2"/>
+                    <path id="Path-9-Copy-2" fill="none" stroke="#6F86A2" stroke-linecap="round" stroke-width="1" d="M77,10.5 L1,10.5"/>
+                    <path id="Path-9-Copy-7" fill="none" stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M8,6 L6,6"/>
+                    <path id="Path-9-Copy-8" fill="none" stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M14,6 L12,6"/>
+                    <path id="Path-9-Copy-9" fill="none" stroke="#E30000" stroke-linecap="round" stroke-width="2" d="M20,6 L18,6"/>
+                </g>
+            </g>
+            <g id="Group-27" stroke="#E30000" stroke-width="2" mask="">
+                <g transform="translate(51.000000, 39.000000)">
+                    <circle id="Oval" cx="8" cy="5" r="5"/>
+                    <path id="Rectangle-14" stroke-linecap="round" d="M0,17 C0,13.1340068 3.18375289,10 7.11111111,10 L8.88888889,10 C12.8162471,10 16,13.1340068 16,17"/>
+                </g>
+            </g>
+            <g id="Group-30" stroke="#6F86A2" stroke-linecap="round" mask="">
+                <g transform="translate(15.000000, 37.000000)">
+                    <path id="Path-9-Copy-2" d="M24,1.5 L0,1.5"/>
+                    <path id="Path-9-Copy-3" d="M24,7.5 L0,7.5"/>
+                    <path id="Path-9-Copy-4" d="M24,13.5 L0,13.5"/>
+                    <path id="Path-9-Copy-5" d="M24,19.5 L0,19.5"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

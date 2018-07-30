@@ -1,0 +1,72 @@
+.controls
+  display flex
+  flex-direction column
+  // align-items center
+  justify-content space-around
+  height 100%
+  margin-right -22px
+  +below('md')
+    flex-direction row
+  +below('sm')
+    margin-right 0
+  &__item
+    margin-right 22px
+    cursor pointer
+    svg
+      fill $c-lightgray
+      $transition(fill)
+    &:hover
+      svg
+        fill $c-red
+      .burger__line
+        background-color $c-red
+    &.active
+      svg
+        fill $c-red
+      // .burger__line
+      //   background-color $c-red
+    &:last-child
+      margin-right 0
+    +below('sm')
+      padding 0
+      width 56px
+      height 56px
+      border-radius 4px
+      margin-right 10px
+      &_bordered
+        border 1px solid #F3F4F5
+    +below('xs')
+      margin-right 6px
+  &__icon
+    display flex
+    align-items center
+    justify-content center
+    flex-grow 1
+
+.burger
+  width 18px
+  height 14px
+  position relative
+  &__line
+    position absolute
+    background-color $c-lightgray
+    width 18px
+    height 2px
+    top 0
+    left 0
+    transition .3s ease all
+    &:nth-child(1)
+      /.active ^[0] &
+        transform rotate(45deg) translate(4px, 5px)
+    &:nth-child(2)
+      top 6px
+      /.active ^[0] &
+        opacity 0
+    &:nth-child(3)
+      top 12px
+      /.active ^[0] &
+        transform rotate(-45deg) translate(4px, -4px)
+    ^[0]:hover &
+      background-color $c-red
+    // /.active ^[0] &
+    //   background-color $c-red

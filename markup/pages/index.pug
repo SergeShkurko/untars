@@ -1,0 +1,25 @@
+extends _template.pug
+include ../components/main/main
+include ../components/main-features/main-features
+include ../components/how-to-start/how-to-start
+include ../components/application/application
+include ../components/main-info/main-info
+include ../components/news/news
+include ../components/map/map
+include ../components/banners/splitted
+
+block body
+  +main()
+  +main-features()
+  +how-to-start()
+  +banner-big-section("%=static=%img/content/metatrader.jpg", "#index-one")
+  +banner-splitted-section("%=static=%img/content/content_1.jpg", "#index-one-1", "%=static=%img/content/content_1.jpg", "#index-one-2")
+  +application()
+  +main-info()
+  +news()
+  +banner-big-section("%=static=%img/content/metatrader.jpg", "#index-two")
+  +banner-splitted-section("%=static=%img/content/content_1.jpg", "#index-two-1", "%=static=%img/content/content_1.jpg", "#index-two-2")
+  +map()
+
+block scripts
+  script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

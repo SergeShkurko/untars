@@ -1,0 +1,26 @@
+include ../../node_modules/bemto.pug/bemto_webpack
+include ../components/header/header
+include ../components/footer/footer
+include ../components/up-button/up-button
+
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+
+  head
+    +head({title:'Альфа Форекс'})
+
+  body.page
+    .page-wrapper
+      +header()
+      block body
+      +up-button()
+      +footer()
+
+    //- script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    //- script svg4everybody();
+
+    script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+  block scripts

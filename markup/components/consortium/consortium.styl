@@ -1,0 +1,40 @@
+.consortium
+  display flex
+  justify-content space-between
+
+  &__item
+    display flex
+    flex-direction column
+
+  &__icon
+    display flex
+    justify-content center
+    align-items center
+    height 120px
+    flex-shrink 0
+    &_phone
+      padding-left 25px
+    &_office
+      padding-left 20px
+
+  &__title
+    margin-bottom 8px
+    font-weight 500
+    line-height 20px
+    text-align center
+    color $c-background_corporate
+    font-size 15px
+    +below('xs')
+      font-size 15px
+      line-height 18px
+
+  &__text
+    font-size 13px
+    line-height 16px
+    text-align center
+    color $c-gray
+    margin-top auto
+    +below('sm')
+      font-size $fz-small
+      line-height 15px
+

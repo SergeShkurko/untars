@@ -1,0 +1,150 @@
+.accordion-pane
+  width 100%
+  border 1px solid $c-light-border
+  & + .button
+    margin-top 40px
+    +below('sm')
+      margin-top 20px
+
+  &:not(:last-of-type)&:not(:last-child)
+    border-bottom none
+
+  &_open
+    background #fff
+
+  &__header
+    min-height 85px
+    padding 32px 64px 32px 32px
+    cursor pointer
+    transition .3s ease-out
+    transition-property box-shadow, background-color
+    display flex
+    flex-direction column
+    justify-content center
+    flex-wrap wrap
+    position relative
+    +below('xs')
+      min-height auto
+      padding 20px 40px 20px 20px
+
+    &_block
+      display block
+
+    &:hover
+      box-shadow 0 2px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1)
+      background-color #fff
+
+    ~/_open &
+      transition unset
+      &:hover
+        box-shadow none
+
+  &__body
+    overflow hidden
+    height 0
+
+    ~/_open &
+      height initial
+
+  &__title
+  &__subtitle
+    max-width 570px
+    width 100%
+
+  &__title
+    color #273142
+    $font-size($fz-xlarge)
+    +below('xs')
+      font-size $fz-medium
+      font-weight 500
+
+  &__subtitle
+    color $c-lightgray
+    $font-size($fz-small)
+    margin-top 8px
+
+  &__icon
+    position absolute
+    right 40px
+    top calc(50% - 9px)
+    transition .3s ease-out
+    transform-origin 50% 50%
+    +below('xs')
+      right 20px
+      top 23px
+    ~/_open &
+      transform rotate(180deg)
+
+.files-list
+  list-style none
+  padding 16px 90px 44px 32px
+  margin 0
+  +below('xs')
+    padding 6px 40px 14px 20px
+  &__item
+    &:not(:last-child)
+      border-bottom 1px solid $c-light-border
+      margin-bottom 30px
+      padding-bottom 32px
+      +below('xs')
+        margin-bottom 16px
+        padding-bottom 0
+
+.file-link
+  color $c-darkgray
+  display flex
+  justify-content space-between
+  +below('xs')
+    flex-direction column
+
+  &__title
+    max-width 710px
+    $font-size(14px)
+    transition .3s ease
+    +below('xs')
+      margin-bottom 16px
+  &__info
+    +below('xs')
+      margin-bottom 16px
+
+    ~/:hover &
+      color $c-red
+
+.file-info
+  display flex
+  align-items center
+  $font-size($fz-small)
+
+  &_pdf
+    color #EF3124
+
+  &_doc
+    color #2B579A
+
+  &_xls
+    color #107C10
+
+  &__icon
+    margin-right 4px
+    display inline-block
+
+    svg
+      display block
+
+  &__name
+    font-weight bold
+    margin-right 8px
+
+  &__size
+    color $c-lightgray
+
+
++at('md')
+
+  .file-link
+    &__title
+      flex 1
+      margin-right 16px
+
+
+

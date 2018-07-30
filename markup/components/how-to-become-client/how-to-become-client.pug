@@ -1,0 +1,30 @@
+mixin how-to-become-client(data)
+  section.section
+    .container
+      +b.heading._center._for_element.wow.fadeInUp Как начать?
+      +b.how-to-start
+        +e.items
+          +e.item.feature
+            .feature__icon.feature__icon_office
+              include ../../static/img/svg/office.svg
+            .feature__title Посетите отделение #[br] Альфа-Банка
+          +e.item.feature
+            .feature__icon
+              include ../../static/img/svg/pc.svg
+            .feature__title Получите доступ #[br] к интернет-банку
+          +e.item.feature
+            .feature__icon
+              include ../../static/img/svg/safe.svg
+            .feature__title Создайте #[br]торговый счет
+          +e.item.feature
+            .feature__icon
+              include ../../static/img/svg/trade-start.svg
+            .feature__title Зарабатывайте #[br]с нами
+        +e.button
+          +b.BUTTON.button._theme_white._theme_on_white._is_bold(data-modal-target="map")
+            +e.content
+              +e.icon._stroked
+                include ../../static/img/svg/pin.svg
+              +e.text Найти ближайшее отделение
+
+
