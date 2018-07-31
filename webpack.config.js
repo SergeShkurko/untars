@@ -29,7 +29,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.json', '.styl'],
+    extensions: ['.js', '.json'],
     alias: {
       'components': path.resolve(__dirname, 'markup/components'),
       'pages': path.resolve(__dirname, 'markup/pages'),

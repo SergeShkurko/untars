@@ -35,9 +35,6 @@ import ContactsMap from 'components/contacts/contacts';
 
 // import '../stylus/fonts.styl'
 
-import '../stylus/entry/main.styl'
-
-
 // import '../stylus/vars.styl'
 // import '../stylus/mixins.styl'
 // import '../stylus/normalize.styl'
