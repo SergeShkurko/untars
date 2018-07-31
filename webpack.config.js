@@ -29,7 +29,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.json', '.styl'],
     alias: {
       'components': path.resolve(__dirname, 'markup/components'),
       'pages': path.resolve(__dirname, 'markup/pages'),
@@ -57,6 +57,10 @@ module.exports = {
           name: '[name].[ext]',
           outputPath: 'static/assets/',
         },
+      },
+      {
+        test: /.styl$/,
+        loader: 'style-loader/url!css-loader!stylus-loader',
       },
     ]
   },

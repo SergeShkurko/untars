@@ -9,10 +9,6 @@ mixin head(data)
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
     meta(name="HandheldFriendly", content="true")
 
-    |<!--[if IE 8 ]><link href="%=static=%css/main_ie8%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
-    |<!--[if IE 9 ]><link href="%=static=%css/main_ie9%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><![endif]-->
-    |<!--[if (gt IE 9)|!(IE)]><!--><link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css"><!--<![endif]-->
-
     if data.useSocialMetaTags
         meta(property="og:title", content="#{data.title}")
         meta(property="og:title", content="")
@@ -28,4 +24,3 @@ mixin head(data)
     link(rel="icon" type="image/x-icon" href="favicon.ico")
     script.
         (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
-    |<!--[if lt IE 9 ]><script src="%=static=%js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->
