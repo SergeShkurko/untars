@@ -208,7 +208,7 @@ export default class OfficeMap {
   constructor(container) {
     this.container = container;
     this.url = container.getAttribute('data-url');
-    this.pinPath = window.location.hostname === 'localhost' ? './static/img/minified-svg/map-pin.svg' : '/local/templates/main/build/static/img/minified-svg/map-pin.svg';
+    this.pinPath = window.location.hostname === 'localhost' ? './static/img/svg/map-pin.svg' : '/local/templates/main/build/static/img/svg/map-pin.svg';
     this.sidebar = new MapSidebar({
       container: document.querySelector('.map-wrapper'),
       baseClass: 'map-sidebar',

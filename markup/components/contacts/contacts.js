@@ -18,7 +18,7 @@ export default class ContactsMap {
 
   constructor(options) {
     this.placemarks = options.placemarks;
-    this.pinPath = window.location.hostname === 'localhost' ? './static/img/minified-svg/map-pin.svg' : '/local/templates/main/build/static/img/minified-svg/map-pin.svg';
+    this.pinPath = window.location.hostname === 'localhost' ? './static/img/svg/map-pin.svg' : '/local/templates/main/build/static/img/svg/map-pin.svg';
     ({
       ymaps
     } = window);

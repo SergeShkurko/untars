@@ -33,15 +33,7 @@ import Information from 'components/information/information';
 import SearchBar from 'components/search/search';
 import ContactsMap from 'components/contacts/contacts';
 
-// import '../stylus/fonts.styl'
-
-// import '../stylus/vars.styl'
-// import '../stylus/mixins.styl'
-// import '../stylus/normalize.styl'
-// import '../stylus/_grid.styl'
-// import '../stylus/_rupture_config.styl'
-
-// import '../stylus/common.styl'
+import '../stylus/entry.styl'
 
 const init = (component) =>
   ('init' in component)

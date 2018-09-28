@@ -1,6 +1,6 @@
 define([], function () {
-  w = window;
-  d = document;
+  const w = window,
+    d = document;
 
   var raf = w.requestAnimationFrame || w.setImmediate || function (c) { return setTimeout(c, 0); };
 

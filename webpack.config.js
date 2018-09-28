@@ -1,35 +1,54 @@
-const path = require('path'),
+const fs = require('fs'),
+  path = require('path'),
   webpack = require('webpack'),
-  BrowserSyncPlugin = require('browser-sync-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
-  CopyWebpackPlugin = require('copy-webpack-plugin')
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
+  WebpackBuildNotifierPlugin = require('webpack-build-notifier'),
+  config = require('./creative')
 
-const env = process.env.NODE_ENV,
+const mode = process.env.NODE_ENV,
   plugins = []
 
-env === 'development' &&
+const utils = {
+  /**
+   * Формирование конфигураций страниц для
+   * их дальнейшей сборки
+   */
+  pages: fs.readdirSync('./markup/pages/')
+    .filter((fileName) => fileName.indexOf('template') < 1)
+    .map((fileName) => ({
+      filename: fileName.replace('pug', 'html'),
+      template: `./markup/pages/${fileName}`,
+    })),
+  /**
+   * Формирование путей для копирования ресурсов,
+   * расположенных в компонентах
+   */
+  componentsAssets: fs.readdirSync('./markup/components/')
+    .filter((componentName) => fs.existsSync(`./markup/components/${componentName}/assets/`))
+    .map((componentName) => ({
+      from: `./markup/components/${componentName}/assets/`,
+      to: `./static/img/assets/${componentName}/`,
+    })),
+}
+
+mode === 'development' &&
   plugins.push(
-    // http://localhost:3000
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      open: false,
-      server: {
-        baseDir: ['development'],
-      },
-    }),
+    new WebpackBuildNotifierPlugin(config.notify)
   )
 
 module.exports = {
+  mode,
   entry: {
     bundle: `${__dirname}/markup/static/js/main.js`,
   },
   output: {
-    path: `${__dirname}/${env}`,
+    path: `${__dirname}/${mode}`,
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', 'jsx', '.json'],
     alias: {
       'components': path.resolve(__dirname, 'markup/components'),
       'pages': path.resolve(__dirname, 'markup/pages'),
@@ -37,7 +56,10 @@ module.exports = {
     }
   },
 
-  devtool: env === 'production' ? false : 'source-map',
+  devtool: mode === 'production' ? false : 'source-map',
+  performance: {
+    hints: mode === 'production' ? 'warning' : false
+  },
 
   module: {
     rules: [
@@ -60,22 +82,32 @@ module.exports = {
       },
       {
         test: /.styl$/,
-        loader: 'style-loader/url!css-loader!stylus-loader',
+        loader: [
+          MiniCssExtractPlugin.loader,
+          'css-loader?-url',
+          'stylus-loader',
+        ],
       },
     ]
   },
 
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.APP_ENV': JSON.stringify(env),
+      'process.env.APP_ENV': JSON.stringify(mode),
     }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './markup/pages/404.pug',
+    ...utils.pages.map((page) => new HtmlWebpackPlugin(page)),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
     }),
     new CopyWebpackPlugin([
-      { from: 'markup/static', to: 'static' },
+      { from: 'markup/static/fonts', to: 'static/fonts' },
+      { from: 'markup/static/img', to: 'static/img' },
+      { from: 'markup/static/misc', to: '.' },
+      ...utils.componentsAssets,
     ]),
-    ...plugins
-  ]
+    ...plugins,
+  ],
+
+  devServer: config.devServer,
 }
