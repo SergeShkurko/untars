@@ -1,7 +1,0 @@
-mixin currenciesDropdown(id, allCurrencies)
-  +b.SELECT.currencies-dropdown( id=id )
-    each item, index in allCurrencies
-      if (index === 0)
-        option( value=item[0], selected )=item[1]
-      else
-        option( value=item[0] )=item[1]

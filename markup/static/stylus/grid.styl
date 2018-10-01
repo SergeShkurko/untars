@@ -1,0 +1,63 @@
+$padding = 30px
+$columns = 12
+
+.container
+  margin auto
+  padding 0 ($padding / 2)
+  width 100%
+  +above('sm')
+    width 750px
+  +above('md')
+    width 920px
+  +above('lg')
+    width 1150px
+
+.row
+  margin-left -($padding / 2)
+  margin-right -($padding / 2)
+  display flex
+  flex-flow row wrap
+
+  &_center
+    justify-content center
+    &-md
+      +below('md')
+        justify-content center
+    &-xs
+      +below('xs')
+        justify-content center
+
+column($preffix, $columns)
+  for $column in 1..$columns
+    .column{$preffix}-{$column}
+      width percentage($column/$columns)
+
+.column
+  padding 0 ($padding / 2)
+  width 100%
+  display flex
+  flex-flow column nowrap
+  +at('lg')
+    &_lg-0
+      display none
+  +at('md')
+    &_md-0
+      display none
+  +at('sm')
+    &_sm-0
+      display none
+  +at('xs')
+    &_xs-0
+      display none
+
+
+column('_xs', $columns)
+
++above('sm')
+  column('_sm', $columns)
+
++above('md')
+  column('_md', $columns)
+
++above('lg')
+  column('_lg', $columns)

@@ -1,27 +1,27 @@
-// Mixins.
+$transition(property)
+  transition .3s ease property
 
-m-nl()
-    margin 0
-    padding 0
-    text-indent 0
-    list-style none
-    list-style-position outside
+$font-size(size)
+  font-size size
+  line-height size + 4
 
-m-cf()
-    &:before, &:after
-        display table
-        content ""
+$shadow()
+  box-shadow: 0 2px 24px 0 rgba(0,0,0,0.08), 0 2px 4px 0 rgba(181,187,194,0.1);
 
-    &:after
-        clear both
+$scrollbar()
+  &::-webkit-scrollbar
+    width 3px
+    height 3px
+    border-radius 4px
+    background-color rgba($c-lightgray, 20%)
+  &::-webkit-scrollbar-thumb
+    background-color rgba($c-lightgray, 40%)
+    border-radius 4px
 
-    .lt-ie8 &
-        zoom 1
-
-
-m-blocks-justify()
-    text-align justify
-    text-justify newspaper
-
-
-// You can add your own mixins here:
+$scrollbar-vertical()
+  &::-webkit-scrollbar
+    width 4px
+    height 4px
+  &::-webkit-scrollbar-thumb
+    background-color rgba($c-lightgray)
+    border-radius 4px

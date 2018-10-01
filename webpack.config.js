@@ -1,13 +1,16 @@
 const fs = require('fs'),
   path = require('path'),
   webpack = require('webpack'),
+  autoprefixer = require('autoprefixer-stylus'),
+  rupture = require('rupture'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require('mini-css-extract-plugin'),
   CopyWebpackPlugin = require('copy-webpack-plugin'),
   WebpackBuildNotifierPlugin = require('webpack-build-notifier'),
-  config = require('./creative')
+  config = require('./config')
 
 const mode = process.env.NODE_ENV,
+  isLocalDevelopment = process.argv.join('|').includes('webpack-dev-server'),
   plugins = []
 
 const utils = {
@@ -33,7 +36,7 @@ const utils = {
     })),
 }
 
-mode === 'development' &&
+isLocalDevelopment &&
   plugins.push(
     new WebpackBuildNotifierPlugin(config.notify)
   )
@@ -57,6 +60,7 @@ module.exports = {
   },
 
   devtool: mode === 'production' ? false : 'source-map',
+
   performance: {
     hints: mode === 'production' ? 'warning' : false
   },
@@ -85,7 +89,15 @@ module.exports = {
         loader: [
           MiniCssExtractPlugin.loader,
           'css-loader?-url',
-          'stylus-loader',
+          {
+            loader: 'stylus-loader',
+            options: {
+              use: [
+                autoprefixer(),
+                rupture(),
+              ],
+            },
+          },
         ],
       },
     ]

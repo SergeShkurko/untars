@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
+    "paths": {
+      "components/*": ["markup/components/*"],
+      "pages/*": ["markup/pages/*"],
+      "static/*": ["markup/static/*"]
+    }
+  },
+  "exclude": ["node_modules", "development", "staging", "production"]
+}

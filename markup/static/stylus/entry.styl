@@ -1,12 +1,20 @@
-@import '../../../node_modules/swiper/dist/css/swiper.min.css'
-@import '../../../node_modules/choices.js/assets/styles/css/choices.min.css'
-
-@import './normalize.styl'
+/* Vars, which are specific for current project */
 @import './vars.styl'
-@import './mixins.styl'
-@import './_grid.styl'
-@import './_rupture_config.styl'
 
+/* Mixins, which are specific for current project */
+@import './mixins.styl'
+
+/* Stylus for used fonts */
+@import './fonts.styl'
+
+/* Reset default browser styles  */
+@import './normalize.styl'
+
+/* Load config fpr library */
+@import './rupture-config.styl'
+
+/* Common styles for current project */
 @import './common.styl'
 
+/* Include all components */
 @import '../../components/**/*.styl'

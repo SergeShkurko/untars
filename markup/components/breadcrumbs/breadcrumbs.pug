@@ -1,9 +1,0 @@
-mixin breadcrumbs(data)
-  +b.breadcrumbs&attributes(attributes)
-    each crumb, index in data
-      +b.breadcrumb
-        if (index === data.length - 1)
-          +e.SPAN.title= crumb
-        else
-          +e.A.link(href="#")= crumb
-

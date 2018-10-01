@@ -1,28 +1,28 @@
 mixin head(data)
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible", content="ie=edge")
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
     title #{data.title}
-    meta(content="", name="description")
-    meta(content="", name="keywords")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(content="telephone=no", name="format-detection")
+    meta(content='', name='description')
+    meta(content='', name='keywords')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(content='telephone=no', name='format-detection')
     //- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers
-    meta(name="HandheldFriendly", content="true")
+    meta(name='HandheldFriendly', content='true')
 
     if data.useSocialMetaTags
-        meta(property="og:title", content="#{data.title}")
-        meta(property="og:title", content="")
-        meta(property="og:url", content="")
-        meta(property="og:description", content="")
-        meta(property="og:image", content="")
-        meta(property="og:image:type", content="image/jpeg")
-        meta(property="og:image:width", content="500")
-        meta(property="og:image:height", content="300")
-        meta(property="twitter:description", content="")
-        link(rel="image_src", href="")
+        meta(property='og:title', content='#{data.title}')
+        meta(property='og:url', content='')
+        meta(property='og:description', content='')
+        meta(property='og:image', content='')
+        meta(property='og:image:type', content='image/jpeg')
+        meta(property='og:image:width', content='500')
+        meta(property='og:image:height', content='300')
+        meta(property='twitter:description', content='')
+        link(rel='image_src', href='')
 
-    link(rel="icon" type="image/x-icon" href="favicon.ico")
+    link(rel='icon' type='image/x-icon' href='favicon.ico')
 
-    link(rel="stylesheet" href="bundle.css")
+    link(rel='stylesheet' href='bundle.css')
+
     script.
         (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)

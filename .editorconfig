@@ -14,11 +14,3 @@ trim_trailing_whitespace = false
 
 [node_modules/**.js]
 codepaint = false
-
-[*.styl]
-indent_style = space
-indent_size = 4
-
-[package.json]
-indent_style = space
-indent_size = 2
